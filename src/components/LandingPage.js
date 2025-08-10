@@ -14,7 +14,7 @@ const LandingPage = () => {
         <div className="container">
           <div className="nav-content">
             <div className="nav-logo">
-              <span>Masha English</span>
+              <span>Masha English Teacher</span>
             </div>
             <div className="nav-links">
               <a href="#about" className="nav-link">About</a>
@@ -33,12 +33,12 @@ const LandingPage = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1>
-                Master CELPIP with an Expert
-                <span className="highlight"> Who Gets Results</span>
+                Pass CELPIP & Get Your Canadian PR
+                <span className="highlight"> with Expert Guidance</span>
               </h1>
               <p className="hero-subtitle">
-                I'm Masha, your TESOL-certified CELPIP instructor. I help immigrants like you 
-                pass CELPIP faster with proven methods, personalized feedback, and clear progress tracking.
+                I'm Masha, your TESOL-certified English instructor living in Canada 🇨🇦. I help immigrants like you 
+                achieve CELPIP success and improve English for Canadian life with proven teaching methods.
               </p>
               <div className="hero-cta">
                 <button className="cta-primary" onClick={scrollToTrial}>
@@ -52,15 +52,15 @@ const LandingPage = () => {
               <div className="credentials">
                 <div className="credential-item">
                   <span className="icon">🎓</span>
-                  <span>TESOL Certified</span>
-                </div>
-                <div className="credential-item">
-                  <span className="icon">📜</span>
-                  <span>Cambridge Business English</span>
+                  <span>TESOL Diploma</span>
                 </div>
                 <div className="credential-item">
                   <span className="icon">🎯</span>
-                  <span>CELPIP Instructor</span>
+                  <span>Official CELPIP Instructor</span>
+                </div>
+                <div className="credential-item">
+                  <span className="icon">💼</span>
+                  <span>Cambridge Business English</span>
                 </div>
               </div>
             </div>
@@ -111,7 +111,14 @@ const LandingPage = () => {
                   <div className="quality-icon">🌍</div>
                   <div>
                     <h4>I Understand Your Journey</h4>
-                    <p>I speak Russian and Ukrainian. I know the challenges immigrants face learning English.</p>
+                    <p>I speak Ukrainian and Russian, and I've taught students from many countries. I know the specific challenges each nationality faces and what to focus on for faster improvement.</p>
+                  </div>
+                </div>
+                <div className="quality-item">
+                  <div className="quality-icon">💼</div>
+                  <div>
+                    <h4>Interview Preparation Expert</h4>
+                    <p>With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication.</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +127,7 @@ const LandingPage = () => {
               <h3>Professional Credentials</h3>
               <div className="cert-list">
                 <div className="cert-item">
-                  <div className="cert-icon">🇨🇦</div>
+                  <div className="cert-icon">🎓</div>
                   <div>
                     <h4>TESOL Diploma</h4>
                     <p>Canada - Teaching English to Speakers of Other Languages</p>
@@ -129,15 +136,15 @@ const LandingPage = () => {
                 <div className="cert-item">
                   <div className="cert-icon">🎯</div>
                   <div>
-                    <h4>CELPIP Instructor Certificate</h4>
+                    <h4>Official CELPIP Instructor</h4>
                     <p>Certified to prepare students for Canadian immigration English tests</p>
                   </div>
                 </div>
                 <div className="cert-item">
-                  <div className="cert-icon">🏢</div>
+                  <div className="cert-icon">💼</div>
                   <div>
-                    <h4>Cambridge Business English Certificate</h4>
-                    <p>Specialized training in professional English communication</p>
+                    <h4>Cambridge Business English</h4>
+                    <p>Professional communication & interview preparation specialist</p>
                   </div>
                 </div>
               </div>
@@ -208,6 +215,10 @@ const LandingPage = () => {
             <p className="trial-subtitle">
               25 minutes to see if we're a good fit • No commitment required
             </p>
+            <div className="limited-time-notice">
+              <span className="notice-icon">⏰</span>
+              <span>Free trial available while I'm building my schedule</span>
+            </div>
           </div>
           
           <div className="trial-content">
@@ -245,7 +256,7 @@ const LandingPage = () => {
                   Pick a time that works for you from my available slots
                 </p>
                 <a 
-                  href="https://calendly.com/your-calendly-link" 
+                  href="https://calendly.com/masha-dolda/trial-english-class" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="cta-primary large calendly-button"
@@ -266,7 +277,7 @@ const LandingPage = () => {
         <div className="container">
           <h2>How I Can Help You</h2>
           <p className="services-subtitle">
-            Three options to improve your English and CELPIP scores
+            CELPIP preparation • General English for immigration • Interview coaching
           </p>
           <div className="services-grid">
             <div className="service-card featured">
@@ -279,8 +290,8 @@ const LandingPage = () => {
                 <p>CELPIP-focused and General English speaking practice in small groups. Build confidence with other learners at your level.</p>
                 <ul>
                   <li>CELPIP speaking tasks practice</li>
-                  <li>General conversation skills</li>
-                  <li>Small groups (max 6 students)</li>
+                  <li>General English conversation skills</li>
+                  <li>Small group setting</li>
                   <li>Structured feedback sessions</li>
                   <li>Weekly practice schedule</li>
                 </ul>
@@ -298,13 +309,13 @@ const LandingPage = () => {
                 <span className="service-type">Private</span>
               </div>
               <div className="service-content">
-                <p>Personalized English and CELPIP preparation tailored to your specific needs and timeline.</p>
+                <p>Personalized CELPIP preparation, general English, or interview coaching tailored to your specific needs.</p>
                 <ul>
-                  <li>Customized lesson plans</li>
-                  <li>All 4 CELPIP skills or focus areas</li>
+                  <li>CELPIP test preparation (all 4 skills)</li>
+                  <li>General English for immigration</li>
+                  <li>Job interview preparation</li>
                   <li>Flexible scheduling</li>
-                  <li>Intensive feedback and correction</li>
-                  <li>Progress tracking</li>
+                  <li>Intensive feedback and progress tracking</li>
                 </ul>
                 <div className="service-price">From CAD $35 per session</div>
               </div>
@@ -337,9 +348,9 @@ const LandingPage = () => {
       <section className="newsletter-signup">
         <div className="container">
           <div className="newsletter-content">
-            <h2>Get Weekly CELPIP Tips</h2>
+            <h2>Get CELPIP Tips & Updates</h2>
             <p className="newsletter-subtitle">
-              Free mini-lessons, practice exercises, and insider tips delivered to your inbox every week
+              Stay updated with CELPIP tips and news about upcoming classes
             </p>
             <form className="newsletter-form">
               <div className="email-input-group">
@@ -350,27 +361,13 @@ const LandingPage = () => {
                   required 
                 />
                 <button type="submit" className="newsletter-btn">
-                  Get Free Tips
+                  Subscribe
                 </button>
               </div>
               <p className="newsletter-privacy">
-                📧 No spam, ever. Unsubscribe anytime. • 🎯 CELPIP-focused content only
+                No spam. Unsubscribe anytime.
               </p>
             </form>
-            <div className="newsletter-benefits">
-              <div className="benefit">
-                <span className="benefit-icon">📝</span>
-                <span>Weekly practice questions</span>
-              </div>
-              <div className="benefit">
-                <span className="benefit-icon">🎯</span>
-                <span>Speaking improvement tips</span>
-              </div>
-              <div className="benefit">
-                <span className="benefit-icon">📈</span>
-                <span>CLB level guidance</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
