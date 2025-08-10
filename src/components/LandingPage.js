@@ -1,5 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
+import mashaPhoto from '../assets/masha-photo.jpg';
 
 const LandingPage = () => {
   const scrollToTrial = () => {
@@ -8,6 +9,24 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      {/* Navigation */}
+      <nav className="main-nav">
+        <div className="container">
+          <div className="nav-content">
+            <div className="nav-logo">
+              <span>Masha English</span>
+            </div>
+            <div className="nav-links">
+              <a href="#about" className="nav-link">About</a>
+              <a href="#services" className="nav-link">Services</a>
+              <a href="#testimonials" className="nav-link">Reviews</a>
+              <a href="#trial" className="nav-link">Free Trial</a>
+              <button className="nav-cta" onClick={scrollToTrial}>Book Now</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
@@ -47,7 +66,7 @@ const LandingPage = () => {
             </div>
             <div className="hero-image">
               <div className="profile-card">
-                <div className="profile-img"></div>
+                <div className="profile-img" style={{backgroundImage: `url(${mashaPhoto})`}}></div>
                 <h3>Masha</h3>
                 <p>English Teacher & CELPIP Specialist</p>
                 <div className="rating">
@@ -265,6 +284,10 @@ const LandingPage = () => {
                   <li>Structured feedback sessions</li>
                   <li>Weekly practice schedule</li>
                 </ul>
+                <div className="urgency-banner">
+                  <span className="urgency-icon">⏰</span>
+                  <span>Limited spots available for September 2025 cohort</span>
+                </div>
                 <div className="service-price">From CAD $15 per session</div>
               </div>
             </div>
@@ -310,6 +333,48 @@ const LandingPage = () => {
 
 
 
+      {/* Email Newsletter Section */}
+      <section className="newsletter-signup">
+        <div className="container">
+          <div className="newsletter-content">
+            <h2>Get Weekly CELPIP Tips</h2>
+            <p className="newsletter-subtitle">
+              Free mini-lessons, practice exercises, and insider tips delivered to your inbox every week
+            </p>
+            <form className="newsletter-form">
+              <div className="email-input-group">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email address" 
+                  className="email-input"
+                  required 
+                />
+                <button type="submit" className="newsletter-btn">
+                  Get Free Tips
+                </button>
+              </div>
+              <p className="newsletter-privacy">
+                📧 No spam, ever. Unsubscribe anytime. • 🎯 CELPIP-focused content only
+              </p>
+            </form>
+            <div className="newsletter-benefits">
+              <div className="benefit">
+                <span className="benefit-icon">📝</span>
+                <span>Weekly practice questions</span>
+              </div>
+              <div className="benefit">
+                <span className="benefit-icon">🎯</span>
+                <span>Speaking improvement tips</span>
+              </div>
+              <div className="benefit">
+                <span className="benefit-icon">📈</span>
+                <span>CLB level guidance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="final-cta">
         <div className="container">
@@ -347,9 +412,30 @@ const LandingPage = () => {
             <div className="footer-info">
               <h3>Masha - English Teacher</h3>
               <p>Professional English instruction with a focus on results</p>
+              <div className="footer-credentials">
+                <p>TESOL Certified • Cambridge Business English • CELPIP Instructor</p>
+              </div>
             </div>
-            <div className="footer-credentials">
-              <p>TESOL Certified • Cambridge Business English • CELPIP Instructor</p>
+            <div className="footer-contact">
+              <h4>Connect With Me</h4>
+              <div className="contact-methods">
+                <a href="mailto:masha.dolda@gmail.com" className="contact-item">
+                  <span className="contact-icon">📧</span>
+                  <span>masha.dolda@gmail.com</span>
+                </a>
+                <a href="https://wa.me/16723380172" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <span className="contact-icon">💬</span>
+                  <span>WhatsApp: +1 (672) 338-0172</span>
+                </a>
+                <a href="https://www.linkedin.com/in/mashadolda/" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <span className="contact-icon">💼</span>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/masha.english.tutor" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <span className="contact-icon">📸</span>
+                  <span>@masha.english.tutor</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
