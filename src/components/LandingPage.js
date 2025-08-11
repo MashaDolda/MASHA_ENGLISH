@@ -6,6 +6,10 @@ const LandingPage = () => {
   const scrollToTrial = () => {
     document.getElementById('trial').scrollIntoView({ behavior: 'smooth' });
   };
+  
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
     <div className="landing-page">
@@ -23,7 +27,23 @@ const LandingPage = () => {
               <a href="#trial" className="nav-link">Free Trial</a>
               <button className="nav-cta" onClick={scrollToTrial}>Book Now</button>
             </div>
+            <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+              <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
           </div>
+          {mobileMenuOpen && (
+            <div className="mobile-menu">
+              <a href="#about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</a>
+              <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Reviews</a>
+              <a href="#trial" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Free Trial</a>
+              <button className="mobile-nav-cta" onClick={() => {scrollToTrial(); setMobileMenuOpen(false);}}>Book Now</button>
+            </div>
+          )}
         </div>
       </nav>
 

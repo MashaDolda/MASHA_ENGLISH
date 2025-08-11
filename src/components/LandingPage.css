@@ -1649,7 +1649,92 @@ html {
   transition: background 0.2s ease;
 }
 
-.nav-cta:hover {
+  .nav-cta:hover {
+    background: var(--primary-dark);
+  }
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--background-white);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-lg);
+  flex-direction: column;
+  gap: var(--spacing-md);
+  z-index: 1000;
+  border-top: 1px solid var(--border-light);
+}
+
+.mobile-nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: color 0.2s ease;
+  font-size: var(--font-size-lg);
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary-color);
+}
+
+.mobile-nav-cta {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: var(--spacing-sm);
+  min-height: 48px;
+}
+
+.mobile-nav-cta:hover {
   background: var(--primary-dark);
 }
 
@@ -1820,12 +1905,76 @@ html {
 
 /* Mobile Responsive for New Elements */
 @media (max-width: 768px) {
+  /* Mobile Navigation */
   .nav-links {
     display: none;
   }
   
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: flex;
+  }
+  
+  /* For now, show essential nav items in a simplified way */
+  .main-nav .nav-content {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-logo span {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav-cta {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    border-radius: var(--border-radius);
+  }
+  
+  /* Mobile Typography Improvements */
+  h1 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Improve mobile spacing */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* Better mobile section padding */
+  section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  /* Mobile Newsletter */
   .email-input-group {
     flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .email-input {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
+  }
+  
+  .newsletter-btn {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
   }
   
   .newsletter-benefits {
@@ -1834,8 +1983,54 @@ html {
     gap: var(--spacing-md);
   }
   
+  /* Mobile Footer */
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  /* Mobile Trial Section */
+  .trial-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  /* Mobile Trial Title Fix */
+  .trial-info .trial-process-title {
+    font-size: 2rem !important;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  /* Mobile Hero Improvements */
+  .hero-text h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  /* Mobile Profile Image */
+  .profile-img {
+    width: 280px;
+    height: 280px;
+  }
+  
+  /* Mobile Button Improvements */
+  .cta-primary {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-md);
+    font-size: var(--font-size-base);
+    min-height: 48px; /* Minimum touch target */
+  }
+  
+  .cta-primary.large {
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    min-height: 52px;
   }
 }
