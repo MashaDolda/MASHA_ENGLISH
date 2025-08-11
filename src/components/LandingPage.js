@@ -69,20 +69,6 @@ const LandingPage = () => {
                   <span className="free-badge">FREE</span>
                 </div>
               </div>
-              <div className="credentials">
-                <div className="credential-item">
-                  <span className="icon">🎓</span>
-                  <span>TESOL Diploma</span>
-                </div>
-                <div className="credential-item">
-                  <span className="icon">🎯</span>
-                  <span>Official CELPIP Instructor</span>
-                </div>
-                <div className="credential-item">
-                  <span className="icon">💼</span>
-                  <span>Cambridge Business English</span>
-                </div>
-              </div>
             </div>
             <div className="hero-image">
               <div className="profile-card">
@@ -92,7 +78,20 @@ const LandingPage = () => {
                   <div className="stars">★★★★★</div>
                   <div className="review-count">5 Star Super Tutor on Preply</div>
                 </div>
-
+                <div className="credentials">
+                  <div className="credential-item">
+                    <span className="icon">🎓</span>
+                    <span>TESOL</span>
+                  </div>
+                  <div className="credential-item">
+                    <span className="icon">🎯</span>
+                    <span>CELPIP</span>
+                  </div>
+                  <div className="credential-item">
+                    <span className="icon">💼</span>
+                    <span>Cambridge</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

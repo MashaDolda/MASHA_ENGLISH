@@ -2190,31 +2190,32 @@ html {
     gap: var(--spacing-xs);
   }
   
-  /* CRITICAL MOBILE LAYOUT FIXES - Higher Specificity */
+  /* UNIFIED MOBILE HERO - Personal Brand Approach */
   .landing-page .hero-content {
     grid-template-columns: 1fr !important;
     text-align: center !important;
-    gap: var(--spacing-lg) !important;
+    gap: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    padding: var(--spacing-lg) var(--spacing-sm) !important;
   }
   
-  /* Mobile Hero Text - First in Order for Better UX */
-  .landing-page .hero-text {
-    order: 1 !important;
-    width: 100% !important;
-    text-align: center !important;
-    padding: 0 var(--spacing-sm) !important;
-  }
-  
-  /* Mobile Hero Image - Second in Order */
+  /* Mobile Photo + Name Integration - First Element */
   .landing-page .hero-image {
-    order: 2 !important;
+    order: 1 !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
-    margin: var(--spacing-lg) 0 !important;
+    margin: 0 0 var(--spacing-md) 0 !important;
+  }
+  
+  /* Mobile Hero Text - After Photo for Trust Flow */
+  .landing-page .hero-text {
+    order: 2 !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
   }
   
   .landing-page .about-content {
@@ -2259,106 +2260,125 @@ html {
     padding: 2rem 0 !important;
   }
   
-  /* Mobile Profile Card Complete Fix */
+  /* Integrated Mobile Profile - No Card, More Natural */
   .landing-page .profile-card {
-    max-width: 280px !important;
-    margin: 0 auto !important;
-    padding: var(--spacing-md) !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     text-align: center !important;
-    background: var(--background-white) !important;
-    border-radius: var(--border-radius-lg) !important;
-    box-shadow: var(--shadow-lg) !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .landing-page .profile-img {
-    width: 150px !important;
-    height: 150px !important;
-    margin: 0 auto var(--spacing-sm) auto !important;
-    border: 3px solid var(--primary-color) !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto var(--spacing-xs) auto !important;
+    border: 4px solid var(--primary-color) !important;
     position: relative !important;
     z-index: 1 !important;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2) !important;
   }
   
   .landing-page .profile-card h3 {
-    font-size: var(--font-size-base) !important;
+    font-size: var(--font-size-xl) !important;
     margin-bottom: var(--spacing-xs) !important;
     text-align: center !important;
     color: var(--text-primary) !important;
+    font-weight: 700 !important;
   }
   
-  /* Fix Star Rating Alignment */
+  /* Prominent Star Rating Integration */
   .landing-page .rating {
     text-align: center !important;
-    margin-bottom: var(--spacing-sm) !important;
+    margin-bottom: var(--spacing-lg) !important;
     width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .landing-page .stars {
-    font-size: var(--font-size-base) !important;
+    font-size: var(--font-size-lg) !important;
     margin-bottom: var(--spacing-xs) !important;
     text-align: center !important;
     display: block !important;
-    line-height: 1.2 !important;
+    line-height: 1 !important;
     color: #fbbf24 !important;
+    letter-spacing: 2px !important;
   }
   
   .landing-page .review-count {
-    font-size: var(--font-size-xs) !important;
+    font-size: var(--font-size-sm) !important;
     text-align: center !important;
     display: block !important;
     line-height: 1.3 !important;
-    color: var(--text-secondary) !important;
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    background: var(--accent-light) !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    border-radius: 15px !important;
     white-space: nowrap !important;
   }
   
-  /* Optimized Mobile Typography Hierarchy */
+  /* Mobile Typography - After Photo Introduction */
   .landing-page .hero-text h1 {
-    font-size: 2rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: var(--spacing-lg) !important;
+    font-size: 1.875rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: var(--spacing-md) !important;
     text-align: center !important;
     padding: 0 var(--spacing-sm) !important;
     word-wrap: break-word !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: var(--text-primary) !important;
+    margin-top: 0 !important;
   }
   
   .landing-page .hero-subtitle {
-    font-size: var(--font-size-base) !important;
-    line-height: 1.4 !important;
-    margin-bottom: var(--spacing-md) !important;
+    font-size: var(--font-size-sm) !important;
+    line-height: 1.5 !important;
+    margin-bottom: var(--spacing-lg) !important;
     text-align: center !important;
     padding: 0 var(--spacing-md) !important;
     color: var(--text-secondary) !important;
-    max-width: 90% !important;
+    max-width: 95% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   
-  /* Fix Credentials Layout */
+  /* Credentials in Photo Section - Part of Introduction */
   .landing-page .credentials {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: var(--spacing-xs) !important;
-    margin-top: var(--spacing-md) !important;
+    margin-top: var(--spacing-sm) !important;
     width: 100% !important;
+    order: 1.5 !important;
   }
   
   .landing-page .credential-item {
-    flex: 0 1 calc(50% - var(--spacing-xs)) !important;
-    min-width: 140px !important;
+    flex: 0 1 auto !important;
+    min-width: auto !important;
     justify-content: center !important;
     text-align: center !important;
-    font-size: var(--font-size-xs) !important;
+    font-size: 0.6rem !important;
     padding: var(--spacing-xs) var(--spacing-sm) !important;
-    background: var(--background-white) !important;
-    border-radius: var(--border-radius) !important;
-    box-shadow: var(--shadow-sm) !important;
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
   }
   
   .landing-page .credential-item .icon {
-    font-size: var(--font-size-base) !important;
+    font-size: 0.7rem !important;
     margin-right: var(--spacing-xs) !important;
   }
   
