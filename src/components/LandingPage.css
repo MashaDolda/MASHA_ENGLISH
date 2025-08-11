@@ -287,10 +287,8 @@ p {
 }
 
 .profile-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 1;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   margin: 0 auto var(--spacing-sm);
   border: 5px solid var(--primary-color);
@@ -356,27 +354,7 @@ p {
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: var(--spacing-2xl) 0;
-    min-height: auto;
-  }
-  
-  .hero-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-2xl);
-    text-align: center;
-  }
-  
-  .credentials {
-    justify-content: center;
-  }
-  
-  .credential-item {
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-}
+/* Duplicate mobile styles removed - consolidated in main mobile section */
 
 /* About Section */
 .about {
@@ -1920,10 +1898,13 @@ html {
     display: flex;
   }
   
-  /* For now, show essential nav items in a simplified way */
-  .main-nav .nav-content {
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
+  /* Mobile Navigation Layout */
+  .main-nav {
+    position: relative;
+  }
+  
+  .nav-content {
+    padding: var(--spacing-md) 0;
   }
   
   .nav-logo span {
@@ -1936,32 +1917,29 @@ html {
     border-radius: var(--border-radius);
   }
   
-  /* Mobile Typography - Enhanced line heights only (font sizes handled earlier) */
+  /* Mobile Typography Improvements */
+  h1 {
+    font-size: var(--font-size-3xl);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: var(--font-size-xl);
+  }
   
   /* Improve mobile spacing */
   .container {
     padding: 0 var(--spacing-md);
-    max-width: 100%;
-    margin: 0 auto;
   }
   
   /* Better mobile section padding */
   section {
     padding: var(--spacing-2xl) 0;
-  }
-  
-  /* Ensure all text is readable on mobile */
-  body {
-    font-size: 16px;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  /* Make sure grid layouts are mobile-friendly */
-  .about-content,
-  .services-grid,
-  .testimonials-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--spacing-lg) !important;
   }
   
   /* Mobile Newsletter */
@@ -2009,9 +1987,20 @@ html {
   }
   
   /* Mobile Hero Improvements */
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  
   .hero-text h1 {
-    font-size: var(--font-size-3xl);
-    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
   }
   
   .hero-subtitle {
@@ -2019,7 +2008,44 @@ html {
     margin-bottom: var(--spacing-lg);
   }
   
-  /* Mobile Profile Image - responsive sizing handled above */
+  /* Mobile Profile Card & Image */
+  .profile-card {
+    max-width: 320px;
+    padding: var(--spacing-md);
+    margin: 0 auto;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--spacing-md);
+  }
+  
+  .profile-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .stars {
+    font-size: var(--font-size-lg);
+  }
+  
+  .review-count {
+    font-size: var(--font-size-xs);
+  }
+  
+  /* Mobile Credentials */
+  .credentials {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .credential-item {
+    flex-basis: calc(50% - var(--spacing-xs));
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
   
   /* Mobile Button Improvements */
   .cta-primary {
