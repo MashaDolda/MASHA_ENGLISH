@@ -355,7 +355,7 @@ const LandingPage = () => {
           <div className="newsletter-content">
             <h2>Get CELPIP Tips & Updates</h2>
             <p className="newsletter-subtitle">
-              Join 500+ students receiving weekly CELPIP tips, practice questions, and news about upcoming classes
+              Get weekly CELPIP tips, practice questions, and news about upcoming classes
             </p>
             <form className="newsletter-form">
               <div className="email-input-group">
