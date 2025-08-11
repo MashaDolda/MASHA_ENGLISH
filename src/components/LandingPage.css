@@ -287,8 +287,10 @@ p {
 }
 
 .profile-img {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 50%;
   margin: 0 auto var(--spacing-sm);
   border: 5px solid var(--primary-color);
@@ -1934,29 +1936,32 @@ html {
     border-radius: var(--border-radius);
   }
   
-  /* Mobile Typography Improvements */
-  h1 {
-    font-size: var(--font-size-3xl);
-    line-height: 1.1;
-  }
-  
-  h2 {
-    font-size: var(--font-size-2xl);
-    line-height: 1.2;
-  }
-  
-  h3 {
-    font-size: var(--font-size-xl);
-  }
+  /* Mobile Typography - Enhanced line heights only (font sizes handled earlier) */
   
   /* Improve mobile spacing */
   .container {
     padding: 0 var(--spacing-md);
+    max-width: 100%;
+    margin: 0 auto;
   }
   
   /* Better mobile section padding */
   section {
     padding: var(--spacing-2xl) 0;
+  }
+  
+  /* Ensure all text is readable on mobile */
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Make sure grid layouts are mobile-friendly */
+  .about-content,
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
   }
   
   /* Mobile Newsletter */
@@ -2014,11 +2019,7 @@ html {
     margin-bottom: var(--spacing-lg);
   }
   
-  /* Mobile Profile Image */
-  .profile-img {
-    width: 280px;
-    height: 280px;
-  }
+  /* Mobile Profile Image - responsive sizing handled above */
   
   /* Mobile Button Improvements */
   .cta-primary {
