@@ -70,13 +70,9 @@ const LandingPage = () => {
                 <h3>Masha</h3>
                 <div className="rating">
                   <div className="stars">★★★★★</div>
-                  <div className="review-count">5.0 • 7 reviews on Preply</div>
+                  <div className="review-count">5 Star Super Tutor on Preply</div>
                 </div>
-                <div className="profile-credentials">
-                  <div className="credential">TESOL Diploma</div>
-                  <div className="credential">Official CELPIP Instructor</div>
-                  <div className="credential">Cambridge Business English</div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -121,7 +117,7 @@ const LandingPage = () => {
                 <div className="quality-item">
                   <div className="quality-icon">💼</div>
                   <div>
-                    <h4>Interview Preparation Expert</h4>
+                    <h4>Interview Preparation</h4>
                     <p>With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication.</p>
                   </div>
                 </div>
@@ -167,7 +163,7 @@ const LandingPage = () => {
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <div className="testimonial-content">
-                <p>We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date.</p>
+                <p>"We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date."</p>
               </div>
               <div className="testimonial-author">
                 <div className="author-info">
@@ -180,7 +176,7 @@ const LandingPage = () => {
             
             <div className="testimonial-card">
               <div className="testimonial-content">
-                <p>Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!</p>
+                <p>"Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!"</p>
               </div>
               <div className="testimonial-author">
                 <div className="author-info">
@@ -193,7 +189,7 @@ const LandingPage = () => {
             
             <div className="testimonial-card">
               <div className="testimonial-content">
-                <p>Masha is a very professional tutor. While we are making conversations, she is also checking my English, immediately points out to me about my mistakes. She really cares about my progress in English and building my confidence in communication.</p>
+                <p>"Masha is a very professional tutor. While we are making conversations, she is also checking my English, immediately points out to me about my mistakes. She really cares about my progress in English and building my confidence in communication."</p>
               </div>
               <div className="testimonial-author">
                 <div className="author-info">
@@ -206,7 +202,7 @@ const LandingPage = () => {
           </div>
           <div className="preply-badge">
             <span className="badge-icon">🌟</span>
-            <span>5.0/5 stars • 7 reviews on Preply</span>
+            <span>45+ positive reviews on Preply</span>
           </div>
         </div>
       </section>
@@ -219,28 +215,25 @@ const LandingPage = () => {
             <p className="trial-subtitle">
               25 minutes to see if we're a good fit • No commitment required
             </p>
-            <div className="limited-time-notice">
-              <span className="notice-icon">🎯</span>
-              <span>Open slots available • Limited time offer</span>
-            </div>
-          </div>
-          
-          <div className="trial-content">
-            <div className="trial-info">
-              <h3>What Happens in Your Trial</h3>
-              <div className="trial-steps">
+
+                    </div>
+            
+            <div className="trial-content">
+              <div className="trial-info">
+                <h3 className="trial-process-title">What Happens in Your Trial</h3>
+                <div className="trial-steps">
                 <div className="step">
                   <span className="step-number">1</span>
                   <div className="step-text">
                     <h4>Assessment</h4>
-                    <p>I evaluate your current English level and CELPIP goals</p>
+                    <p>I evaluate your current English level and your specific goals (CELPIP, general English, or job interviews)</p>
                   </div>
                 </div>
                 <div className="step">
                   <span className="step-number">2</span>
                   <div className="step-text">
                     <h4>Practice Task</h4>
-                    <p>You try a sample CELPIP speaking task</p>
+                    <p>You try a relevant speaking task based on your goals (CELPIP practice, conversation, or interview simulation)</p>
                   </div>
                 </div>
                 <div className="step">
@@ -255,6 +248,10 @@ const LandingPage = () => {
             
             <div className="trial-booking">
               <div className="booking-card">
+                <div className="booking-badge">
+                  <span className="badge-icon">⏰</span>
+                  <span>Open slots available • Limited time offer</span>
+                </div>
                 <h3>Choose Your Time</h3>
                 <p className="booking-description">
                   Pick a time that works for you from my available slots
@@ -265,8 +262,12 @@ const LandingPage = () => {
                   rel="noopener noreferrer"
                   className="cta-primary large calendly-button"
                 >
-                  Book Free Trial - $0
+                  Book Free Trial
                 </a>
+                <div className="price-comparison">
+                  <span className="compare-price">CA$15</span>
+                  <span className="current-price">FREE</span>
+                </div>
                 <p className="booking-note">
                   Choose your preferred time • Automatic confirmation • No waiting
                 </p>
@@ -301,7 +302,7 @@ const LandingPage = () => {
                 </ul>
                 <div className="urgency-banner">
                   <span className="urgency-icon">⏰</span>
-                  <span>Limited spots available for September 2025 cohort</span>
+                  <span>Limited spots available for September 2025</span>
                 </div>
                 <div className="service-price">From CAD $15 per session</div>
               </div>
