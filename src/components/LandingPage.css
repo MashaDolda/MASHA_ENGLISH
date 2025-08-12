@@ -2238,7 +2238,7 @@ html {
     gap: var(--spacing-xs);
   }
   
-  /* COMPACT MOBILE HERO - Everything Above Fold */
+  /* ULTRA-COMPACT MOBILE HERO - Everything Above Fold */
   .landing-page .hero-content {
     grid-template-columns: 1fr !important;
     text-align: center !important;
@@ -2250,7 +2250,7 @@ html {
     min-height: 100vh !important;
     /* iOS Safari viewport height fix */
     min-height: -webkit-fill-available !important;
-    justify-content: flex-start !important;
+    justify-content: space-evenly !important;
     /* Prevent horizontal overflow on iOS */
     width: 100% !important;
     max-width: 100vw !important;
@@ -2353,7 +2353,7 @@ html {
     }
   }
   
-  /* Large Mobile Profile - Maximum Impact */
+  /* Compact Mobile Profile - Above Fold Optimized */
   .landing-page .profile-card {
     max-width: 100% !important;
     margin: 0 !important;
@@ -2368,16 +2368,19 @@ html {
   }
   
   .landing-page .profile-img {
-    width: 220px !important;
-    height: 220px !important;
-    margin: 0 auto var(--spacing-xs) auto !important;
-    border: 6px solid var(--primary-color) !important;
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto var(--spacing-sm) auto !important;
+    border: 5px solid var(--primary-color) !important;
     position: relative !important;
     z-index: 1 !important;
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3) !important;
-    background-size: cover !important;
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.25) !important;
+    background-size: 140% !important;
     background-position: center 15% !important;
     background-repeat: no-repeat !important;
+    /* Tighter crop for better face prominence */
+    object-fit: cover !important;
+    object-position: center 15% !important;
   }
   
   .landing-page .profile-card h3 {
@@ -2388,7 +2391,7 @@ html {
     font-weight: 800 !important;
   }
   
-  /* Compact Star Rating */
+  /* Ultra-Compact Star Rating */
   .landing-page .rating {
     text-align: center !important;
     margin-bottom: var(--spacing-xs) !important;
@@ -2399,8 +2402,8 @@ html {
   }
   
   .landing-page .stars {
-    font-size: var(--font-size-xl) !important;
-    margin-bottom: var(--spacing-xs) !important;
+    font-size: var(--font-size-lg) !important;
+    margin-bottom: 2px !important;
     text-align: center !important;
     display: block !important;
     line-height: 1 !important;
@@ -2409,52 +2412,50 @@ html {
   }
   
   .landing-page .review-count {
-    font-size: var(--font-size-xs) !important;
+    font-size: 0.7rem !important;
     text-align: center !important;
     display: block !important;
-    line-height: 1.2 !important;
+    line-height: 1.1 !important;
     color: var(--primary-color) !important;
     font-weight: 700 !important;
     background: var(--accent-light) !important;
-    padding: var(--spacing-xs) var(--spacing-sm) !important;
-    border-radius: 12px !important;
+    padding: 2px var(--spacing-xs) !important;
+    border-radius: 8px !important;
     white-space: nowrap !important;
   }
   
-  /* Dominant Mobile Headlines - Strong Hierarchy */
+  /* Compact Mobile Typography - Above Fold Focus */
   .landing-page .hero-text h1 {
-    font-size: 2.2rem !important;
-    line-height: 1.05 !important;
+    font-size: 1.625rem !important;
+    line-height: 1.1 !important;
     margin-bottom: var(--spacing-sm) !important;
     text-align: center !important;
-    padding: 0 var(--spacing-xs) !important;
+    padding: 0 var(--spacing-sm) !important;
     word-wrap: break-word !important;
-    font-weight: 900 !important;
+    font-weight: 800 !important;
     color: var(--text-primary) !important;
     margin-top: 0 !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
-    letter-spacing: -0.5px !important;
   }
   
   .landing-page .hero-subtitle {
-    font-size: 0.85rem !important;
-    line-height: 1.25 !important;
-    margin-bottom: var(--spacing-xs) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: var(--spacing-sm) !important;
     text-align: center !important;
-    padding: 0 var(--spacing-sm) !important;
+    padding: 0 var(--spacing-md) !important;
     color: var(--text-secondary) !important;
     max-width: 95% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   
-  /* Credentials in Photo Section - Part of Introduction */
+  /* Ultra-Compact Credentials */
   .landing-page .credentials {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: var(--spacing-xs) !important;
-    margin-top: var(--spacing-sm) !important;
+    gap: 4px !important;
+    margin-top: var(--spacing-xs) !important;
     width: 100% !important;
     order: 1.5 !important;
   }
@@ -2464,57 +2465,54 @@ html {
     min-width: auto !important;
     justify-content: center !important;
     text-align: center !important;
-    font-size: 0.6rem !important;
-    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    font-size: 0.55rem !important;
+    padding: 3px 6px !important;
     background: var(--primary-color) !important;
     color: white !important;
-    border-radius: 12px !important;
+    border-radius: 8px !important;
     box-shadow: none !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
+    letter-spacing: 0.3px !important;
   }
   
   .landing-page .credential-item .icon {
-    font-size: 0.7rem !important;
-    margin-right: var(--spacing-xs) !important;
+    font-size: 0.6rem !important;
+    margin-right: 2px !important;
   }
   
-  /* PROMINENT Above-Fold CTA */
+  /* Ultra-Compact Above-Fold CTA */
   .landing-page .hero-cta {
-    margin: var(--spacing-xs) 0 var(--spacing-sm) 0 !important;
+    margin: 0 !important;
     width: 100% !important;
     text-align: center !important;
-    padding: 0 var(--spacing-sm) !important;
+    padding: 0 var(--spacing-md) !important;
   }
   
   .landing-page .hero-cta .cta-primary {
-    font-size: var(--font-size-lg) !important;
-    padding: var(--spacing-lg) var(--spacing-xl) !important;
+    font-size: 0.9rem !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
-    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4) !important;
-    font-weight: 800 !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3) !important;
+    font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
+    letter-spacing: 0.5px !important;
     width: 100% !important;
-    max-width: 320px !important;
-    border-radius: 12px !important;
-    position: relative !important;
-    z-index: 10 !important;
+    max-width: 260px !important;
   }
   
   .landing-page .trial-info {
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: var(--spacing-xs) !important;
-    margin-top: var(--spacing-xs) !important;
+    gap: 4px !important;
+    margin-top: 4px !important;
     text-align: center !important;
   }
   
   .landing-page .trial-info span {
-    font-size: 0.7rem !important;
-    line-height: 1.2 !important;
+    font-size: 0.65rem !important;
+    line-height: 1.1 !important;
   }
   
   /* Mobile Visual Enhancements */
