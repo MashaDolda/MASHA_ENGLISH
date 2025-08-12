@@ -49,21 +49,37 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
 body {
   font-family: var(--font-family);
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--background-white);
+  /* iOS Safari fixes */
+  -webkit-overflow-scrolling: touch;
+  position: relative;
 }
 
 .landing-page {
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -125,6 +141,8 @@ p {
   font-weight: 600;
   border-radius: var(--border-radius);
   cursor: pointer;
+  /* iOS Safari compatible transitions */
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-md);
   text-decoration: none;
@@ -132,18 +150,48 @@ p {
   text-align: center;
   position: relative;
   overflow: hidden;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
+  /* iOS Safari hardware acceleration */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  /* Prevent text selection on mobile */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* iOS Safari touch behavior */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cta-primary:hover {
+  -webkit-transform: translateY(-3px) scale(1.02);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 20px -5px rgba(37, 99, 235, 0.4), var(--shadow-lg);
   background: linear-gradient(135deg, var(--primary-dark), #1e40af);
 }
 
 .cta-primary:active {
+  -webkit-transform: translateY(-1px) scale(1.01);
   transform: translateY(-1px) scale(1.01);
+  -webkit-transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* iOS Safari specific touch states */
+@media (hover: none) and (pointer: coarse) {
+  .cta-primary:hover {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  }
+  
+  .cta-primary:active {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    background: linear-gradient(135deg, var(--primary-dark), #1e40af);
+  }
 }
 
 .cta-primary::before {
@@ -2200,7 +2248,14 @@ html {
     align-items: center !important;
     padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md) var(--spacing-sm) !important;
     min-height: 100vh !important;
+    /* iOS Safari viewport height fix */
+    min-height: -webkit-fill-available !important;
     justify-content: space-between !important;
+    /* Prevent horizontal overflow on iOS */
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative !important;
   }
   
   /* Mobile Photo Integration - Larger and More Prominent */
@@ -2260,11 +2315,42 @@ html {
   .landing-page .container {
     padding: 0 1rem !important;
     max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    /* iOS Safari specific fixes */
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
   }
   
-  /* Mobile Sections */
+  /* iOS Safari global fixes */
+  .landing-page * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    /* Prevent horizontal overflow */
+    max-width: 100% !important;
+  }
+  
+  /* Prevent overscroll bounce on iOS */
   .landing-page section {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
     padding: 2rem 0 !important;
+  }
+  
+  /* iOS Safari scroll and touch fixes */
+  @supports (-webkit-overflow-scrolling: touch) {
+    .landing-page {
+      /* Prevent horizontal bounce */
+      overscroll-behavior-x: none !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .landing-page .hero {
+      /* iOS Safari viewport unit fix */
+      min-height: 100vh !important;
+      min-height: -webkit-fill-available !important;
+    }
   }
   
   /* Large Mobile Profile - Maximum Impact */
@@ -2431,7 +2517,12 @@ html {
     font-size: var(--font-size-sm) !important;
     padding: var(--spacing-sm) var(--spacing-md) !important;
     border-radius: 20px !important;
+    -webkit-animation: pulse 2s infinite !important;
     animation: pulse 2s infinite !important;
+    /* iOS Safari hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    will-change: transform !important;
   }
   
   /* Mobile Profile Card Enhancements */
@@ -2449,10 +2540,27 @@ html {
     padding: var(--spacing-md) 0 var(--spacing-xl) 0 !important;
   }
   
-  /* Add subtle mobile animations */
+  /* iOS Safari compatible animations */
+  @-webkit-keyframes pulse {
+    0%, 100% { 
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+    }
+    50% { 
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); 
+    }
+  }
+  
   @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%, 100% { 
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+    }
+    50% { 
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); 
+    }
   }
   
   /* Mobile Accessibility Improvements */
