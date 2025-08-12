@@ -2351,6 +2351,19 @@ html {
       min-height: 100vh !important;
       min-height: -webkit-fill-available !important;
     }
+    
+    /* Real iPhone vs Simulator differences */
+    .landing-page .hero-content {
+      /* More aggressive compression on real devices */
+      padding: 8px var(--spacing-sm) var(--spacing-xs) var(--spacing-sm) !important;
+      justify-content: space-around !important;
+    }
+    
+    .landing-page .profile-img {
+      /* Slightly larger on actual devices */
+      width: 185px !important;
+      height: 185px !important;
+    }
   }
   
   /* Compact Mobile Profile - Above Fold Optimized */
@@ -2375,12 +2388,20 @@ html {
     position: relative !important;
     z-index: 1 !important;
     box-shadow: 0 12px 35px rgba(37, 99, 235, 0.25) !important;
-    background-size: 140% !important;
-    background-position: center 15% !important;
+    background-size: 160% !important;
+    background-position: center 10% !important;
     background-repeat: no-repeat !important;
-    /* Tighter crop for better face prominence */
+    /* More aggressive crop for face prominence */
     object-fit: cover !important;
-    object-position: center 15% !important;
+    object-position: center 10% !important;
+  }
+  
+  /* iPhone specific optimizations */
+  @supports (-webkit-touch-callout: none) {
+    .landing-page .profile-img {
+      background-size: 180% !important;
+      background-position: center 8% !important;
+    }
   }
   
   .landing-page .profile-card h3 {
