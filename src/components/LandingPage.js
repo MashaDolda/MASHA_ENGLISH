@@ -202,7 +202,7 @@ const LandingPage = () => {
                 <div className="testimonial-author">
                   <div className="author-info">
                     <h4>Viktoriia</h4>
-                    <span>English Student</span>
+                    <span>CELPIP Student</span>
                   </div>
                   <div className="rating">⭐⭐⭐⭐⭐</div>
                 </div>
