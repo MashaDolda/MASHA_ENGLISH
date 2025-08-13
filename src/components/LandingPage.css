@@ -39,7 +39,7 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
-  --max-width: 1200px;
+  --max-width: 1400px;
 }
 
 /* Global Styles */
@@ -78,8 +78,6 @@ body {
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -2187,55 +2185,98 @@ html {
     margin: var(--spacing-sm) 0;
   }
   
-  /* Mobile Testimonials */
+  /* Enhanced Mobile Testimonials */
   .testimonials {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) 0;
+    background: var(--background-light) !important;
   }
   
   .testimonials h2 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
+    text-align: center;
   }
   
   .testimonials-subtitle {
     font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-lg);
-    padding: 0 var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+    text-align: center;
   }
   
   .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-xl) !important;
+    margin-bottom: var(--spacing-xl);
   }
   
   .testimonial-card {
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-lg) !important;
+    margin-bottom: 0 !important;
+    background: var(--background-white) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+    border: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+  }
+  
+  .testimonial-card:nth-child(2) {
+    border-color: var(--primary-color) !important;
+    background: linear-gradient(135deg, var(--background-white), var(--accent-light)) !important;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
   }
   
   .testimonial-content p {
-    font-size: var(--font-size-xs);
-    line-height: 1.5;
-    margin-bottom: var(--spacing-sm) !important;
+    font-size: var(--font-size-sm) !important;
+    line-height: 1.6 !important;
+    margin-bottom: var(--spacing-lg) !important;
+    color: var(--text-primary) !important;
+    font-style: italic !important;
   }
   
   .testimonial-author {
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-md) !important;
+    border-top: 1px solid var(--border-light) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
   
   .author-info h4 {
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-base) !important;
+    margin-bottom: var(--spacing-xs) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
   }
   
   .author-info span {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm) !important;
+    color: var(--text-secondary) !important;
+  }
+  
+  .testimonial-card .rating {
+    font-size: var(--font-size-lg) !important;
+    color: #fbbf24 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
   }
   
   .preply-badge {
-    font-size: var(--font-size-sm);
-    gap: var(--spacing-xs);
+    font-size: var(--font-size-base) !important;
+    gap: var(--spacing-sm) !important;
+    background: linear-gradient(135deg, var(--accent-light), #e0f7fa) !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    border-radius: var(--border-radius-lg) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: var(--spacing-md) !important;
   }
   
   /* ULTRA-COMPACT MOBILE HERO - Everything Above Fold */
