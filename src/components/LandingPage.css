@@ -2274,6 +2274,7 @@ html {
   .testimonials {
     padding: var(--spacing-xl) 0;
     background: var(--background-light) !important;
+    position: relative !important;
   }
   
   .testimonials h2 {
@@ -2289,20 +2290,86 @@ html {
     text-align: center;
   }
   
+  /* Testimonials Container with Visual Indicators */
+  .testimonials-container {
+    position: relative !important;
+    margin: 0 var(--spacing-sm) !important;
+  }
+  
   .testimonials-grid {
     display: flex !important;
     overflow-x: auto !important;
     gap: var(--spacing-lg) !important;
-    margin-bottom: var(--spacing-xl) !important;
-    padding: var(--spacing-sm) 0 var(--spacing-lg) 0 !important;
+    margin-bottom: var(--spacing-lg) !important;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-lg) var(--spacing-md) !important;
     scroll-snap-type: x mandatory !important;
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+    scroll-behavior: smooth !important;
   }
   
   .testimonials-grid::-webkit-scrollbar {
     display: none !important;
+  }
+  
+  /* Scroll Arrows */
+  .scroll-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: var(--background-white) !important;
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: var(--font-size-lg) !important;
+    color: var(--primary-color) !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2) !important;
+    transition: all 0.3s ease !important;
+    user-select: none !important;
+  }
+  
+  .scroll-arrow:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+    transform: translateY(-50%) scale(1.1) !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
+  }
+  
+  .scroll-arrow.left {
+    left: -20px !important;
+  }
+  
+  .scroll-arrow.right {
+    right: -20px !important;
+  }
+  
+  /* Scroll Indicators (Dots) */
+  .scroll-indicators {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--spacing-xs) !important;
+    margin-bottom: var(--spacing-lg) !important;
+  }
+  
+  .scroll-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: var(--border-medium) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+  }
+  
+  .scroll-dot.active {
+    background: var(--primary-color) !important;
+    transform: scale(1.2) !important;
   }
   
   .testimonial-card {
@@ -2374,20 +2441,17 @@ html {
     margin-top: var(--spacing-md) !important;
   }
   
-  /* Scroll indicator for testimonials */
-  .testimonials::after {
-    content: "← Swipe to see more reviews" !important;
-    display: block !important;
-    text-align: center !important;
-    font-size: var(--font-size-xs) !important;
-    color: var(--text-light) !important;
-    margin-top: var(--spacing-sm) !important;
-    animation: fadeInOut 3s infinite !important;
-  }
-  
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+  /* Gradient edge indicator */
+  .testimonials-container::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 40px !important;
+    height: 100% !important;
+    background: linear-gradient(to left, var(--background-light), transparent) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
   }
   
   /* ULTRA-COMPACT MOBILE HERO - Everything Above Fold */

@@ -179,45 +179,64 @@ const LandingPage = () => {
           <p className="testimonials-subtitle">
             Real feedback from students I've helped
           </p>
-          <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <p>"We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date."</p>
-              </div>
-              <div className="testimonial-author">
-                <div className="author-info">
-                  <h4>Mariia</h4>
-                  <span>CELPIP Student</span>
+          <div className="testimonials-container">
+            <div className="scroll-arrow left" onClick={() => {
+              const grid = document.querySelector('.testimonials-grid');
+              grid.scrollBy({ left: -300, behavior: 'smooth' });
+            }}>
+              ‹
+            </div>
+            <div className="testimonials-grid">
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date."</p>
                 </div>
-                <div className="rating">⭐⭐⭐⭐⭐</div>
+                <div className="testimonial-author">
+                  <div className="author-info">
+                    <h4>Mariia</h4>
+                    <span>CELPIP Student</span>
+                  </div>
+                  <div className="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!"</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="author-info">
+                    <h4>Viktoriia</h4>
+                    <span>English Student</span>
+                  </div>
+                  <div className="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+              
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"Masha is a very professional tutor. While we are making conversations, she is also checking my English, immediately points out to me about my mistakes. She really cares about my progress in English and building my confidence in communication."</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="author-info">
+                    <h4>Ivanna</h4>
+                    <span>English Student</span>
+                  </div>
+                  <div className="rating">⭐⭐⭐⭐⭐</div>
+                </div>
               </div>
             </div>
-            
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <p>"Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!"</p>
-              </div>
-              <div className="testimonial-author">
-                <div className="author-info">
-                  <h4>Viktoriia</h4>
-                  <span>English Student</span>
-                </div>
-                <div className="rating">⭐⭐⭐⭐⭐</div>
-              </div>
+            <div className="scroll-arrow right" onClick={() => {
+              const grid = document.querySelector('.testimonials-grid');
+              grid.scrollBy({ left: 300, behavior: 'smooth' });
+            }}>
+              ›
             </div>
-            
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <p>"Masha is a very professional tutor. While we are making conversations, she is also checking my English, immediately points out to me about my mistakes. She really cares about my progress in English and building my confidence in communication."</p>
-              </div>
-              <div className="testimonial-author">
-                <div className="author-info">
-                  <h4>Ivanna</h4>
-                  <span>English Student</span>
-                </div>
-                <div className="rating">⭐⭐⭐⭐⭐</div>
-              </div>
-            </div>
+          </div>
+          <div className="scroll-indicators">
+            <div className="scroll-dot active"></div>
+            <div className="scroll-dot"></div>
+            <div className="scroll-dot"></div>
           </div>
           <div className="preply-badge">
             <span className="badge-icon">🌟</span>
