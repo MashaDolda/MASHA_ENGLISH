@@ -2227,7 +2227,7 @@ html {
     display: none !important;
   }
   
-  /* Testimonial Cards - Maximum Space Utilization */
+  /* Testimonial Cards - Consistent Height & Better Layout */
   .landing-page .testimonial-card {
     min-width: calc(100vw - 40px) !important;
     max-width: calc(100vw - 40px) !important;
@@ -2241,7 +2241,10 @@ html {
     border: 1px solid #e5e7eb !important;
     transition: all 0.3s ease !important;
     position: relative !important;
-    height: auto !important;
+    min-height: 180px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
   }
   
   /* Spacer to prevent white space glitch at end */
@@ -2300,10 +2303,17 @@ html {
     50% { opacity: 1; }
   }
   
+  .landing-page .testimonial-content {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  
   .landing-page .testimonial-content p {
     font-size: 0.95rem !important;
     line-height: 1.55 !important;
-    margin-bottom: 1.25rem !important;
+    margin: 0 !important;
     color: #374151 !important;
     font-style: normal !important;
     font-weight: 400 !important;
@@ -2315,6 +2325,8 @@ html {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
   }
   
   .landing-page .author-info h4 {
