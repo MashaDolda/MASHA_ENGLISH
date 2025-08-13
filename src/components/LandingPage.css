@@ -2121,27 +2121,6 @@ html {
     font-size: var(--font-size-xs);
   }
   
-  /* Enhanced Mobile About Section */
-  .landing-page .about {
-    min-height: auto !important;
-    max-height: none !important;
-    padding: 2rem 0 !important;
-  }
-  
-  .landing-page .about h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-    text-align: center !important;
-  }
-  
-  .landing-page .about-intro .lead {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    text-align: center !important;
-    color: #374151 !important;
-  }
-  
   /* Mobile Services Section */
   .services {
     min-height: auto;
@@ -2418,6 +2397,29 @@ html {
   .landing-page .about-content {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* Enhanced Mobile About Section */
+  .landing-page .about {
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 2rem 0 !important;
+  }
+  
+  .landing-page .about h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+    text-align: center !important;
+  }
+  
+  .landing-page .about-intro .lead {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    color: #374151 !important;
   }
   
   /* Enhanced Quality Cards for Mobile */
@@ -2566,6 +2568,8 @@ html {
     max-width: 100% !important;
     width: 100% !important;
     overflow-x: hidden !important;
+    min-height: auto !important;
+    max-height: none !important;
     /* iOS Safari specific fixes */
     -webkit-transform: translate3d(0, 0, 0) !important;
     transform: translate3d(0, 0, 0) !important;
