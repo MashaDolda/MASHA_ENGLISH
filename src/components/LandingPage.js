@@ -179,14 +179,8 @@ const LandingPage = () => {
           <p className="testimonials-subtitle">
             Real feedback from students I've helped
           </p>
-          <div className="swipe-hint">← Swipe or click arrows to see more reviews →</div>
+          <div className="swipe-hint">← Swipe to see more reviews →</div>
           <div className="testimonials-container">
-            <div className="scroll-arrow left" onClick={() => {
-              const grid = document.querySelector('.testimonials-grid');
-              grid.scrollBy({ left: -320, behavior: 'smooth' });
-            }}>
-              ‹
-            </div>
             <div className="testimonials-grid">
               <div className="testimonial-card">
                 <div className="testimonial-content">
@@ -226,12 +220,6 @@ const LandingPage = () => {
                   <div className="rating">⭐⭐⭐⭐⭐</div>
                 </div>
               </div>
-            </div>
-            <div className="scroll-arrow right" onClick={() => {
-              const grid = document.querySelector('.testimonials-grid');
-              grid.scrollBy({ left: 320, behavior: 'smooth' });
-            }}>
-              ›
             </div>
           </div>
           <div className="scroll-indicators">

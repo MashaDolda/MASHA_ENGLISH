@@ -2196,13 +2196,12 @@ html {
     text-align: center;
   }
   
-  /* Testimonials Container with Navigation */
+  /* Clean Testimonials - Swipe Only, No Arrows */
   .landing-page .testimonials-container {
     position: relative !important;
     margin: 0 auto !important;
     max-width: 100% !important;
-    overflow: visible !important;
-    min-height: 200px !important;
+    overflow: hidden !important;
   }
   
   .landing-page .testimonials-grid {
@@ -2217,53 +2216,19 @@ html {
     margin-bottom: 1rem !important;
   }
   
-  .testimonials-grid::-webkit-scrollbar {
+  .landing-page .testimonials-grid::-webkit-scrollbar {
     display: none !important;
   }
   
-  /* Navigation Arrows - Outside Content Area */
+  /* Hide arrows on mobile */
   .landing-page .scroll-arrow {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 36px !important;
-    height: 36px !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    border: 2px solid #2563eb !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 1.2rem !important;
-    color: #2563eb !important;
-    cursor: pointer !important;
-    z-index: 999 !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.3s ease !important;
-    user-select: none !important;
-    font-weight: bold !important;
-    line-height: 1 !important;
+    display: none !important;
   }
   
-  .landing-page .scroll-arrow:hover {
-    background: #2563eb !important;
-    color: white !important;
-    transform: translateY(-50%) scale(1.05) !important;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4) !important;
-  }
-  
-  .landing-page .scroll-arrow.left {
-    left: -18px !important;
-  }
-  
-  .landing-page .scroll-arrow.right {
-    right: -18px !important;
-  }
-  
-  /* Testimonial Cards - Clean Mobile Layout */
+  /* Testimonial Cards - Maximum Space Utilization */
   .landing-page .testimonial-card {
-    min-width: calc(100vw - 80px) !important;
-    max-width: calc(100vw - 80px) !important;
+    min-width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
     flex-shrink: 0 !important;
     scroll-snap-align: start !important;
     padding: 1.5rem !important;
@@ -2306,13 +2271,17 @@ html {
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
   }
   
-  /* Swipe Hint Text */
+  /* Enhanced Swipe Hint - No Arrows Version */
   .landing-page .swipe-hint {
     text-align: center !important;
-    font-size: 0.75rem !important;
-    color: #6b7280 !important;
-    margin-bottom: 1rem !important;
-    animation: fadeInOut 4s infinite !important;
+    font-size: 0.875rem !important;
+    color: #2563eb !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0.5rem 1rem !important;
+    background: rgba(37, 99, 235, 0.1) !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    animation: fadeInOut 3s infinite !important;
   }
   
   @keyframes fadeInOut {
