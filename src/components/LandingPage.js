@@ -115,29 +115,22 @@ const LandingPage = () => {
                 <div className="quality-item">
                   <div className="quality-icon">🎯</div>
                   <div>
-                    <h4>Results-Focused Teaching</h4>
-                    <p>Every lesson has a clear goal. You'll know exactly what you're learning and why.</p>
+                    <h4>CELPIP Test Expert</h4>
+                    <p>Official certified instructor with proven strategies that help students pass CELPIP and achieve their immigration goals.</p>
                   </div>
                 </div>
                 <div className="quality-item">
                   <div className="quality-icon">📊</div>
                   <div>
-                    <h4>Personalized Feedback</h4>
-                    <p>I identify your specific weak points and give you a clear plan to improve them.</p>
+                    <h4>Personalized Teaching</h4>
+                    <p>Every lesson targets your specific weak points with clear feedback and a structured improvement plan.</p>
                   </div>
                 </div>
                 <div className="quality-item">
                   <div className="quality-icon">🌍</div>
                   <div>
-                    <h4>I Understand Your Journey</h4>
-                    <p>I speak Ukrainian and Russian, and I've taught students from many countries. I know the specific challenges each nationality faces and what to focus on for faster improvement.</p>
-                  </div>
-                </div>
-                <div className="quality-item">
-                  <div className="quality-icon">💼</div>
-                  <div>
-                    <h4>Interview Preparation</h4>
-                    <p>With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication.</p>
+                    <h4>Multicultural Experience</h4>
+                    <p>I understand immigrants' challenges, speak Ukrainian/Russian, and have helped students from 20+ countries succeed.</p>
                   </div>
                 </div>
               </div>
