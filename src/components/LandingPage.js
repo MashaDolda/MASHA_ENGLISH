@@ -220,6 +220,7 @@ const LandingPage = () => {
                   <div className="rating">⭐⭐⭐⭐⭐</div>
                 </div>
               </div>
+              <div className="testimonials-spacer"></div>
             </div>
           </div>
           <div className="scroll-indicators">

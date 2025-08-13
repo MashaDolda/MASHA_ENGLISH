@@ -2214,6 +2214,8 @@ html {
     gap: 1rem !important;
     padding: 0.5rem 1rem 1rem 1rem !important;
     margin-bottom: 1rem !important;
+    scroll-padding: 0 1rem !important;
+    overscroll-behavior-x: contain !important;
   }
   
   .landing-page .testimonials-grid::-webkit-scrollbar {
@@ -2230,7 +2232,8 @@ html {
     min-width: calc(100vw - 40px) !important;
     max-width: calc(100vw - 40px) !important;
     flex-shrink: 0 !important;
-    scroll-snap-align: start !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
     padding: 1.5rem !important;
     background: white !important;
     border-radius: 12px !important;
@@ -2239,6 +2242,14 @@ html {
     transition: all 0.3s ease !important;
     position: relative !important;
     height: auto !important;
+  }
+  
+  /* Spacer to prevent white space glitch at end */
+  .landing-page .testimonials-spacer {
+    min-width: 20px !important;
+    width: 20px !important;
+    flex-shrink: 0 !important;
+    height: 1px !important;
   }
   
   .landing-page .testimonial-card:hover {
