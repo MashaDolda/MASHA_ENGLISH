@@ -179,14 +179,7 @@ const LandingPage = () => {
           <p className="testimonials-subtitle">
             Real feedback from students I've helped
           </p>
-          <div className="testimonials-container">
-            <div className="scroll-arrow left" onClick={() => {
-              const grid = document.querySelector('.testimonials-grid');
-              grid.scrollBy({ left: -300, behavior: 'smooth' });
-            }}>
-              ‹
-            </div>
-            <div className="testimonials-grid">
+          <div className="testimonials-grid">
               <div className="testimonial-card">
                 <div className="testimonial-content">
                   <p>"We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date."</p>
@@ -226,18 +219,6 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div className="scroll-arrow right" onClick={() => {
-              const grid = document.querySelector('.testimonials-grid');
-              grid.scrollBy({ left: 300, behavior: 'smooth' });
-            }}>
-              ›
-            </div>
-          </div>
-          <div className="scroll-indicators">
-            <div className="scroll-dot active"></div>
-            <div className="scroll-dot"></div>
-            <div className="scroll-dot"></div>
-          </div>
           <div className="preply-badge">
             <span className="badge-icon">🌟</span>
             <span>45+ positive reviews on Preply</span>
