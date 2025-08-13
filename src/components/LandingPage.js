@@ -200,10 +200,10 @@ const LandingPage = () => {
                   <p>"Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!"</p>
                 </div>
                 <div className="testimonial-author">
-                  <div className="author-info">
-                    <h4>Viktoriia</h4>
-                    <span>CELPIP Student</span>
-                  </div>
+                                      <div className="author-info">
+                      <h4>Viktoriia</h4>
+                      <span>CELPIP Student</span>
+                    </div>
                   <div className="rating">⭐⭐⭐⭐⭐</div>
                 </div>
               </div>
