@@ -2227,7 +2227,7 @@ html {
     display: none !important;
   }
   
-  /* Testimonial Cards - Consistent Height & Better Layout */
+  /* Testimonial Cards - Consistent Height & Layout */
   .landing-page .testimonial-card {
     min-width: calc(100vw - 40px) !important;
     max-width: calc(100vw - 40px) !important;
@@ -2241,7 +2241,7 @@ html {
     border: 1px solid #e5e7eb !important;
     transition: all 0.3s ease !important;
     position: relative !important;
-    min-height: 180px !important;
+    min-height: 200px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
