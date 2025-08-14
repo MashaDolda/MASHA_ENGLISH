@@ -110,6 +110,11 @@ const LandingPage = () => {
                   that get results.</strong> My students consistently improve their CLB levels because 
                   I focus on what actually works.
                 </p>
+                <div className="quick-facts">
+                  <div className="fact"><span className="fact-icon">✅</span><span>Official CELPIP Instructor</span></div>
+                  <div className="fact"><span className="fact-icon">⭐</span><span>45+ 5-star reviews</span></div>
+                  <div className="fact"><span className="fact-icon">🎓</span><span>TESOL Certified</span></div>
+                </div>
               </div>
               <div className="qualities">
                 <div className="quality-item">

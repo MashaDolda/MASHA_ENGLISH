@@ -2433,6 +2433,31 @@ html {
     margin: 1.5rem auto 0 auto !important;
     border-radius: 2px !important;
   }
+
+  /* Quick Facts - compact badges under intro */
+  .landing-page .quick-facts {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    margin: 1rem 0 1.5rem 0 !important;
+  }
+
+  .landing-page .quick-facts .fact {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
+    background: #f3f4f6 !important;
+    color: #111827 !important;
+    border-radius: 999px !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .landing-page .quick-facts .fact-icon {
+    font-size: 0.9rem !important;
+  }
   
   /* Enhanced Quality Cards for Mobile */
   .landing-page .qualities {
@@ -2443,17 +2468,17 @@ html {
   }
   
   .landing-page .quality-item {
-    display: flex !important;
-    gap: 1rem !important;
-    align-items: flex-start !important;
-    padding: 1.25rem !important;
-    background: white !important;
+    display: grid !important;
+    grid-template-columns: 44px 1fr !important;
+    align-items: start !important;
+    column-gap: 0.75rem !important;
+    row-gap: 0.25rem !important;
+    padding: 1rem !important;
+    background: #ffffff !important;
     border-radius: 12px !important;
-    border: 2px solid #f3f4f6 !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-    opacity: 1 !important;
-    transform: none !important;
+    border: 1px solid #e5e7eb !important;
+    transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
   }
 
   
@@ -2471,30 +2496,29 @@ html {
   }
   
   .landing-page .quality-icon {
-    font-size: 2rem !important;
-    min-width: 60px !important;
-    height: 60px !important;
-    background: linear-gradient(135deg, #2563eb, #1e40af) !important;
-    color: white !important;
-    border-radius: 12px !important;
+    font-size: 1.25rem !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: #eef2ff !important;
+    color: #1e40af !important;
+    border-radius: 10px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+    border: 1px solid #e5e7eb !important;
   }
   
   .landing-page .quality-item h4 {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     font-weight: 600 !important;
-    color: #111827 !important;
-    margin-bottom: 0.5rem !important;
+    color: #0f172a !important;
+    margin: 0 !important;
   }
   
   .landing-page .quality-item p {
-    font-size: 0.9rem !important;
-    line-height: 1.5 !important;
-    color: #4b5563 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    color: #475569 !important;
     margin: 0 !important;
   }
   
