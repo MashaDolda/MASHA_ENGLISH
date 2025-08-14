@@ -2444,10 +2444,10 @@ html {
   
   .landing-page .quality-item {
     display: grid !important;
-    grid-template-columns: 50px 1fr !important;
-    gap: 0.875rem !important;
-    align-items: center !important;
-    padding: 1rem !important;
+    grid-template-columns: 40px 1fr !important;
+    gap: 1rem !important;
+    align-items: start !important;
+    padding: 1.125rem !important;
     background: white !important;
     border-radius: 10px !important;
     border: 1.5px solid #e5e7eb !important;
@@ -2456,10 +2456,26 @@ html {
     position: relative !important;
   }
   
-  /* Visual hierarchy - first card emphasis */
+  /* Visual hierarchy - progressive numbering and emphasis */
   .landing-page .quality-item:first-child {
     border-color: #2563eb !important;
     background: linear-gradient(135deg, #ffffff, #f8fafc) !important;
+  }
+  
+  .landing-page .quality-item:first-child .quality-icon {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+  }
+  
+  .landing-page .quality-item:nth-child(2) .quality-icon {
+    background: linear-gradient(135deg, #2563eb, #1e40af) !important;
+  }
+  
+  .landing-page .quality-item:nth-child(3) .quality-icon {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6) !important;
+  }
+  
+  .landing-page .quality-item:nth-child(4) .quality-icon {
+    background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
   }
   
   .landing-page .quality-item:hover {
@@ -2476,26 +2492,26 @@ html {
   }
   
   .landing-page .quality-icon {
-    font-size: 1.5rem !important;
-    width: 50px !important;
-    height: 50px !important;
+    font-size: 1.25rem !important;
+    width: 40px !important;
+    height: 40px !important;
     background: linear-gradient(135deg, #2563eb, #1e40af) !important;
     color: white !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     flex-shrink: 0 !important;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25) !important;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2) !important;
     align-self: flex-start !important;
-    margin-top: 0.125rem !important;
+    margin-top: 0.25rem !important;
   }
   
   .landing-page .quality-content {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
-    min-height: 50px !important;
+    justify-content: flex-start !important;
+    min-height: 40px !important;
   }
   
   .landing-page .quality-item h4 {
