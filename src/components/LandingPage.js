@@ -114,28 +114,28 @@ const LandingPage = () => {
               <div className="qualities">
                 <div className="quality-item">
                   <div className="quality-icon">🎯</div>
-                  <div>
+                  <div className="quality-content">
                     <h4>Results-Focused Teaching</h4>
                     <p>Every lesson has a clear goal. You'll know exactly what you're learning and why.</p>
                   </div>
                 </div>
                 <div className="quality-item">
                   <div className="quality-icon">📊</div>
-                  <div>
+                  <div className="quality-content">
                     <h4>Personalized Feedback</h4>
                     <p>I identify your specific weak points and give you a clear plan to improve them.</p>
                   </div>
                 </div>
                 <div className="quality-item">
                   <div className="quality-icon">🌍</div>
-                  <div>
+                  <div className="quality-content">
                     <h4>I Understand Your Journey</h4>
                     <p>I speak Ukrainian and Russian, and I've taught students from many countries. I know the specific challenges each nationality faces and what to focus on for faster improvement.</p>
                   </div>
                 </div>
                 <div className="quality-item">
                   <div className="quality-icon">💼</div>
-                  <div>
+                  <div className="quality-content">
                     <h4>Interview Preparation</h4>
                     <p>With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication.</p>
                   </div>
