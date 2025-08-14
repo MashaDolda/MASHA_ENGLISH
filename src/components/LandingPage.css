@@ -2903,11 +2903,10 @@ html {
 
 /* Desktop-only adjustments */
 @media screen and (min-width: 769px) {
-  /* Align quality cards bottom edge with credentials container */
-  .landing-page .about-content { align-items: stretch !important; }
-  .landing-page .about-text { display: flex !important; flex-direction: column !important; }
-  .landing-page .about-text .qualities { margin-top: auto !important; }
-
   /* Hide mobile-only swipe hint on desktop */
   .landing-page .swipe-hint { display: none !important; }
+
+  /* Desktop spacing tweaks: reduce empty space above/below cards */
+  .landing-page .about-intro .lead { margin-bottom: var(--spacing-md) !important; }
+  .landing-page .qualities { margin-top: var(--spacing-sm) !important; }
 }
