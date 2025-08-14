@@ -2903,17 +2903,6 @@ html {
 
 /* Desktop-only adjustments */
 @media screen and (min-width: 769px) {
-  /* Distribute space efficiently between intro and quality cards */
-  .landing-page .about-content { align-items: stretch !important; }
-  .landing-page .about-text { 
-    display: flex !important; 
-    flex-direction: column !important; 
-    justify-content: space-between !important;
-  }
-  .landing-page .about-text .qualities { 
-    margin-top: var(--spacing-lg) !important; 
-  }
-
   /* Hide mobile-only swipe hint on desktop */
   .landing-page .swipe-hint { display: none !important; }
 }
