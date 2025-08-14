@@ -2618,8 +2618,117 @@ html {
     grid-template-columns: 1fr !important;
   }
   
+  /* Enhanced Mobile Trial Section */
+  .landing-page .trial {
+    padding: 2rem 0 !important;
+  }
+  
+  .landing-page .trial-header {
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .landing-page .trial-header h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #111827 !important;
+  }
+  
+  .landing-page .trial-subtitle {
+    font-size: 0.9rem !important;
+    color: #6b7280 !important;
+    margin-bottom: 0 !important;
+  }
+  
   .landing-page .trial-content {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .landing-page .trial-info {
+    order: 1 !important;
+  }
+  
+  .landing-page .trial-process-title {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  .landing-page .trial-steps {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .landing-page .step {
+    display: grid !important;
+    grid-template-columns: 32px 1fr !important;
+    gap: 0.75rem !important;
+    align-items: start !important;
+    padding: 0.875rem !important;
+    background: white !important;
+    border-radius: 8px !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .landing-page .step-number {
+    width: 32px !important;
+    height: 32px !important;
+    background: linear-gradient(135deg, #2563eb, #1e40af) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    flex-shrink: 0 !important;
+    margin-top: 0.125rem !important;
+  }
+  
+  .landing-page .step-text h4 {
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+    margin: 0 0 0.375rem 0 !important;
+  }
+  
+  .landing-page .step-text p {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    color: #4b5563 !important;
+    margin: 0 !important;
+  }
+  
+  .landing-page .trial-booking {
+    order: 2 !important;
+    margin-top: 1rem !important;
+  }
+  
+  .landing-page .booking-card {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .landing-page .booking-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    background: #10b981 !important;
+    color: white !important;
+    padding: 0.375rem 0.75rem !important;
+    border-radius: 999px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 1rem !important;
   }
   
   .landing-page .footer-content {
