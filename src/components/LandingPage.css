@@ -2616,6 +2616,17 @@ html {
     -webkit-transform: translate3d(0, 0, 0) !important;
     transform: translate3d(0, 0, 0) !important;
   }
+
+  /* Desktop-only adjustments */
+  @media screen and (min-width: 769px) {
+    /* Align quality cards bottom edge with credentials container */
+    .landing-page .about-content { align-items: stretch !important; }
+    .landing-page .about-text { display: flex !important; flex-direction: column !important; }
+    .landing-page .about-text .qualities { margin-top: auto !important; }
+
+    /* Hide mobile-only swipe hint on desktop */
+    .landing-page .swipe-hint { display: none !important; }
+  }
   
   /* iOS Safari global fixes */
   .landing-page * {
