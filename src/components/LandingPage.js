@@ -278,11 +278,11 @@ const LandingPage = () => {
               <div className="booking-card">
                 <div className="booking-badge">
                   <span className="badge-icon">⏰</span>
-                  <span>Open slots available • Limited time offer</span>
+                  <span>Available Now</span>
                 </div>
-                <h3>Choose Your Time</h3>
+                <h3>Book Your Free Trial</h3>
                 <p className="booking-description">
-                  Pick a time that works for you from my available slots
+                  Pick a time that works for you
                 </p>
                 <a 
                   href="https://calendly.com/masha-dolda/trial-english-class" 
@@ -290,14 +290,14 @@ const LandingPage = () => {
                   rel="noopener noreferrer"
                   className="cta-primary large calendly-button"
                 >
-                  Book Free Trial
+                  Select Time Slot
                 </a>
                 <div className="price-comparison">
                   <span className="compare-price">CA$15</span>
                   <span className="current-price">FREE</span>
                 </div>
                 <p className="booking-note">
-                  Choose your preferred time • Automatic confirmation • No waiting
+                  Instant confirmation • No waiting
                 </p>
               </div>
             </div>
