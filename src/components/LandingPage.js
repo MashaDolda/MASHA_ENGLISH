@@ -247,8 +247,8 @@ const LandingPage = () => {
                     </div>
             
             <div className="trial-content">
+              <h3 className="trial-process-title">What Happens in Your Trial</h3>
               <div className="trial-info">
-                <h3 className="trial-process-title">What Happens in Your Trial</h3>
                 <div className="trial-steps">
                 <div className="step">
                   <span className="step-number">1</span>
