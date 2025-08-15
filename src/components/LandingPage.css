@@ -2651,18 +2651,18 @@ html {
   }
   
   .landing-page .trial-process-title {
-    font-size: 1rem !important;
+    font-size: 1.125rem !important;
     font-weight: 600 !important;
-    color: #6b7280 !important;
-    margin-bottom: 1.25rem !important;
-    text-align: center !important;
-    padding: 0.5rem 1rem !important;
-    background: rgba(107, 114, 128, 0.08) !important;
-    border-radius: 6px !important;
-    display: inline-block !important;
-    width: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    color: #111827 !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    padding: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .landing-page .trial-steps {
@@ -2715,53 +2715,85 @@ html {
   
   .landing-page .trial-booking {
     order: 2 !important;
-    margin-top: 1rem !important;
-  }
-  
-  .landing-page .booking-card {
-    background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 12px !important;
-    padding: 1.5rem !important;
-    text-align: center !important;
+    margin-top: 2rem !important;
   }
   
   .landing-page .booking-badge {
     display: inline-flex !important;
     align-items: center !important;
     gap: 0.375rem !important;
-    background: #10b981 !important;
+    background: #f97316 !important;
     color: white !important;
     padding: 0.5rem 0.875rem !important;
     border-radius: 999px !important;
     font-size: 0.75rem !important;
     font-weight: 600 !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.5rem !important;
     max-width: calc(100vw - 4rem) !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3) !important;
+  }
+  
+  .landing-page .booking-card {
+    background: white !important;
+    border: 2px solid #f97316 !important;
+    border-radius: 12px !important;
+    padding: 2rem 1.5rem !important;
+    text-align: center !important;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.15) !important;
+    position: relative !important;
+    margin-top: 1rem !important;
   }
   
   .landing-page .booking-card h3 {
-    font-size: 1.125rem !important;
-    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
     color: #111827 !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
   }
   
   .landing-page .booking-description {
-    font-size: 0.85rem !important;
-    color: #6b7280 !important;
-    margin-bottom: 1.25rem !important;
+    font-size: 0.9rem !important;
+    color: #4b5563 !important;
+    margin-bottom: 1.5rem !important;
     line-height: 1.4 !important;
   }
   
   .landing-page .booking-note {
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
     color: #6b7280 !important;
-    margin-top: 0.75rem !important;
+    margin-top: 1rem !important;
     line-height: 1.3 !important;
+  }
+  
+  .landing-page .cta-primary.large {
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    min-height: 56px !important;
+    margin: 0.75rem 0 !important;
+  }
+  
+  .landing-page .price-comparison {
+    margin: 1rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+  }
+  
+  .landing-page .compare-price {
+    font-size: 1rem !important;
+    color: #9ca3af !important;
+    text-decoration: line-through !important;
+  }
+  
+  .landing-page .current-price {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #f97316 !important;
   }
   
   .landing-page .footer-content {
