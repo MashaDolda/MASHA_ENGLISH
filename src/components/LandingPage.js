@@ -278,9 +278,9 @@ const LandingPage = () => {
               <div className="booking-card">
                 <div className="booking-badge">
                   <span className="badge-icon">⏰</span>
-                  <span>Available Now</span>
+                  <span>Open slots available • Limited time offer</span>
                 </div>
-                <h3>Book Your Free Trial</h3>
+                <h3>Book Your Spot</h3>
                 <p className="booking-description">
                   Pick a time that works for you
                 </p>
@@ -290,7 +290,7 @@ const LandingPage = () => {
                   rel="noopener noreferrer"
                   className="cta-primary large calendly-button"
                 >
-                  Select Time Slot
+                  Book Free Trial
                 </a>
                 <div className="price-comparison">
                   <span className="compare-price">CA$15</span>
