@@ -243,13 +243,12 @@ const LandingPage = () => {
             <p className="trial-subtitle">
               25 minutes to see if we're a good fit • No commitment required
             </p>
-
-                    </div>
-            
-            <div className="trial-content">
-              <h3 className="trial-process-title">What Happens in Your Trial</h3>
-              <div className="trial-info">
-                <div className="trial-steps">
+          </div>
+          
+          <div className="trial-content">
+            <div className="trial-info">
+              <h3 className="trial-process-title">What Happens<br />in Your Trial</h3>
+              <div className="trial-steps">
                 <div className="step">
                   <span className="step-number">1</span>
                   <div className="step-text">
@@ -278,7 +277,8 @@ const LandingPage = () => {
               <div className="booking-card">
                 <div className="booking-badge">
                   <span className="badge-icon">⏰</span>
-                  <span>Open slots available • Limited time offer</span>
+                  <span className="badge-text-desktop">Open slots available • Limited time offer</span>
+                  <span className="badge-text-mobile">Limited time offer</span>
                 </div>
                 <h3>Book Your Spot</h3>
                 <p className="booking-description">
