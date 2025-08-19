@@ -2701,15 +2701,18 @@ html {
     flex-direction: column !important;
   }
   
-  /* Mobile Trial Section Title - Larger and Centered */
+  /* Mobile Trial Section Title - H2 Size, One Line */
   .landing-page .trial-process-title {
     display: block !important;
-    font-size: 1.75rem !important;
-    font-weight: 700 !important;
+    font-size: 1.375rem !important;
+    font-weight: 600 !important;
     color: #111827 !important;
     text-align: center !important;
-    margin: 0 0 2rem 0 !important;
-    line-height: 1.2 !important;
+    margin: 0 0 1.5rem 0 !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
   
   .landing-page .trial-steps {
@@ -2732,7 +2735,7 @@ html {
   /* Mobile Step Layout - Horizontal: Circle Left, Content Right */
   .landing-page .step {
     display: grid !important;
-    grid-template-columns: 48px 1fr !important;
+    grid-template-columns: 52px 1fr !important;
     gap: 1rem !important;
     align-items: start !important;
     padding: 1.25rem !important;
@@ -2750,22 +2753,24 @@ html {
     border-color: #2563eb !important;
   }
   
-  /* Step Number Circles - Fixed Left Position */
+  /* Step Number Circles - Vertically Centered with Title */
   .landing-page .step-number {
-    width: 48px !important;
-    height: 48px !important;
+    width: 52px !important;
+    height: 52px !important;
     background: linear-gradient(135deg, #2563eb, #1e40af) !important;
     color: white !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 1.125rem !important;
-    font-weight: 700 !important;
+    font-size: 1.375rem !important;
+    font-weight: 800 !important;
     flex-shrink: 0 !important;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
     grid-column: 1 !important;
-    margin-top: 2px !important;
+    align-self: center !important;
+    position: relative !important;
+    top: -0.125rem !important;
   }
   
   /* Step Content Container - Right of Circle */
@@ -2776,9 +2781,10 @@ html {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
+    justify-content: flex-start !important;
   }
   
-  /* Step Titles - Bold, Larger, Same Line as Circle */
+  /* Step Titles - Bold, Larger, Aligned with Circle */
   .landing-page .step-text h4 {
     font-size: 1.25rem !important;
     font-weight: 700 !important;
@@ -2787,6 +2793,7 @@ html {
     line-height: 1.3 !important;
     text-align: left !important;
     width: 100% !important;
+    padding-top: 0.125rem !important;
   }
   
   /* Step Descriptions - Left-Aligned Below Titles */
@@ -2805,20 +2812,17 @@ html {
     gap: 0.25rem !important;
     background: #f97316 !important;
     color: white !important;
-    padding: 0.5rem 1rem !important;
+    padding: 0.5rem 0.75rem !important;
     border-radius: 999px !important;
     font-size: 0.65rem !important;
     font-weight: 600 !important;
     margin-bottom: 2rem !important;
-    max-width: calc(100vw - 2rem) !important;
     white-space: nowrap !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
     box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3) !important;
     transform: translateX(-50%) !important;
     left: 50% !important;
     position: absolute !important;
-    top: -25px !important;
+    top: -20px !important;
   }
   
   .landing-page .badge-text-desktop {
@@ -2840,7 +2844,9 @@ html {
     position: relative !important;
     margin: 0 auto !important;
     max-width: 320px !important;
-    width: 100% !important;
+    width: calc(100% - 2rem) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
