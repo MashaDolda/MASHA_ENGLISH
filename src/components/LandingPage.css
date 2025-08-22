@@ -834,7 +834,15 @@ p {
 
 @media (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  .services {
+    max-height: none !important;
+    overflow: visible !important;
   }
 }
 
@@ -2184,6 +2192,12 @@ html {
   .services .container {
     max-height: none !important;
     overflow: visible !important;
+  }
+  
+  .services-grid {
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
   }
   
   .services h2 {
