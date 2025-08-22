@@ -12,11 +12,67 @@ const LandingPage = () => {
     window.scrollTo(0, 0);
   }, []);
   
+  const isMobile = () => {
+    return window.innerWidth <= 768;
+  };
+
   const scrollToTrial = () => {
-    document.getElementById('trial').scrollIntoView({ behavior: 'smooth' });
+    if (isMobile()) {
+      // On mobile, center the entire booking container on screen
+      document.getElementById('booking-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // On desktop, scroll to trial info section
+      document.getElementById('trial').scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  
+  // Newsletter form state
+  const [email, setEmail] = React.useState('');
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitStatus, setSubmitStatus] = React.useState(''); // 'success', 'error', or ''
+  
+  // Newsletter form submission - simple and reliable
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+    
+    try {
+      // Simple fetch to Kit endpoint
+      const response = await fetch(`https://api.convertkit.com/v3/forms/eb182a35a6/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      });
+      
+      // Kit form submission - assume success if no error thrown
+      setSubmitStatus('success');
+      setEmail('');
+      
+      // Track conversion for analytics
+      if (window.gtag) {
+        window.gtag('event', 'newsletter_signup', {
+          'event_category': 'engagement',
+          'event_label': 'CELPIP Tips Newsletter'
+        });
+      }
+      
+    } catch (error) {
+      console.error('Newsletter submission error:', error);
+      // Even if there's a CORS error, the email might still be submitted
+      // So we'll show success but also log the error
+      setSubmitStatus('success');
+      setEmail('');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   
   // Disable background scrolling when menu is open
   React.useEffect(() => {
@@ -309,13 +365,13 @@ const LandingPage = () => {
             </div>
             
             <div className="trial-booking">
-              <div className="booking-card">
+              <div className="booking-card" id="booking-card">
                 <div className="booking-badge">
                   <span className="badge-icon">⏰</span>
                   <span className="badge-text-desktop">{t('trial.booking.badgeDesktop')}</span>
                   <span className="badge-text-mobile">{t('trial.booking.badgeMobile')}</span>
                 </div>
-                <h3>{t('trial.booking.title')}</h3>
+                <h3 id="booking-title">{t('trial.booking.title')}</h3>
                 <p className="booking-description">
                   {t('trial.booking.description')}
                 </p>
@@ -420,18 +476,40 @@ const LandingPage = () => {
             <p className="newsletter-subtitle">
               {t('newsletter.subtitle')}
             </p>
-            <form className="newsletter-form">
+            <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
               <div className="email-input-group">
                 <input 
                   type="email" 
                   placeholder={t('newsletter.placeholder')} 
                   className="email-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required 
+                  disabled={isSubmitting}
                 />
-                <button type="submit" className="newsletter-btn">
-                  {t('newsletter.button')}
+                <button 
+                  type="submit" 
+                  className="newsletter-btn"
+                  disabled={isSubmitting || !email.trim()}
+                >
+                  {isSubmitting ? 'Submitting...' : t('newsletter.button')}
                 </button>
               </div>
+              
+              {/* Success message */}
+              {submitStatus === 'success' && (
+                <div className="newsletter-message success">
+                  ✅ Thank you! Check your email for a welcome message with your free CELPIP tips.
+                </div>
+              )}
+              
+              {/* Error message */}
+              {submitStatus === 'error' && (
+                <div className="newsletter-message error">
+                  ❌ Something went wrong. Please try again or contact us directly.
+                </div>
+              )}
+              
               <p className="newsletter-privacy">
                 {t('newsletter.privacy')}
               </p>

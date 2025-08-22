@@ -13,8 +13,7 @@ Before you start, make sure you have **Node.js** installed on your computer.
 ## Step-by-Step Instructions
 
 ### 1. Open Terminal
-- **On Mac**: Press `Cmd + Space`, type "Terminal", and press Enter
-- **On Windows**: Press `Win + R`, type "cmd", and press Enter
+- 
 
 ### 2. Navigate to Your Project
 Copy and paste this command, then press Enter:

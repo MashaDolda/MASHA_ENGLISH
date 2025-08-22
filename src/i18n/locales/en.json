@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "logo": "Masha English Teacher",
+    "about": "About",
+    "services": "Services", 
+    "reviews": "Reviews",
+    "freeTrial": "Free Trial",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "title": "Pass CELPIP & Get Your Canadian PR",
+    "titleHighlight": " with Expert Guidance",
+    "subtitle": "I'm Masha, your TESOL-certified English instructor living in Canada 🇨🇦. I help immigrants like you achieve CELPIP success and improve English for Canadian life with proven teaching methods.",
+    "ctaButton": "Try a FREE Lesson",
+    "trialInfo": "25-minute trial • See if we're a good fit",
+    "freeBadge": "FREE",
+    "profileName": "Masha",
+    "rating": "5 Star Super Tutor on Preply",
+    "credentials": {
+      "tesol": "TESOL",
+      "celpip": "CELPIP", 
+      "cambridge": "Cambridge"
+    }
+  },
+  "about": {
+    "title": "Why Work With Me?",
+    "lead": "I help immigrants pass CELPIP and improve their English with proven methods that get results. My students consistently improve their CLB levels because I focus on what actually works.",
+    "qualities": {
+      "results": {
+        "title": "Results-Focused Teaching",
+        "description": "Every lesson has a clear goal. You'll know exactly what you're learning and why."
+      },
+      "feedback": {
+        "title": "Personalized Feedback", 
+        "description": "I identify your specific weak points and give you a clear plan to improve them."
+      },
+      "journey": {
+        "title": "I Understand Your Journey",
+        "description": "I speak Ukrainian and Russian, and I've taught students from many countries. I know the specific challenges each nationality faces and what to focus on for faster improvement."
+      },
+      "interview": {
+        "title": "Interview Preparation",
+        "description": "With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication."
+      }
+    },
+    "credentials": {
+      "title": "Professional Credentials",
+      "tesol": {
+        "title": "TESOL Diploma",
+        "description": "Canada - Teaching English to Speakers of Other Languages"
+      },
+      "celpip": {
+        "title": "Official CELPIP Instructor", 
+        "description": "Certified to prepare students for Canadian immigration English tests"
+      },
+      "cambridge": {
+        "title": "Cambridge Business English",
+        "description": "Professional communication & interview preparation specialist"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What My Students Say",
+    "subtitle": "Real feedback from students I've helped",
+    "swipeHint": "← Swipe to see more reviews →",
+    "preplyBadge": "45+ positive reviews on Preply",
+    "reviews": [
+      {
+        "text": "We've had about ten lessons so far, and my main goal is to prepare for the CELPIP English test. Masha has created an excellent study plan and helps me with my weak areas. She is always punctual, and I'm happy to continue learning with her. Her approach is organized and focused, which gives me confidence as I get closer to my test date.",
+        "author": "Mariia",
+        "role": "CELPIP Student"
+      },
+      {
+        "text": "Masha is a great teacher, since I started learning with her I have seen my level of English improve, all the classes are very productive and practical. She is kind, patient and always in a great mood. Highly recommended!",
+        "author": "Viktoriia", 
+        "role": "CELPIP Student"
+      },
+      {
+        "text": "Masha is a very professional tutor. While we are making conversations, she is also checking my English, immediately points out to me about my mistakes. She really cares about my progress in English and building my confidence in communication.",
+        "author": "Ivanna",
+        "role": "English Student"
+      }
+    ]
+  },
+  "trial": {
+    "title": "Book Your Free Trial Lesson",
+    "subtitle": "25 minutes to see if we're a good fit • No commitment required",
+    "processTitle": "What Happens<br />in Your Trial",
+    "steps": {
+      "assessment": {
+        "title": "Assessment",
+        "description": "I evaluate your current English level and your specific goals (CELPIP, general English, or job interviews)"
+      },
+      "practice": {
+        "title": "Practice Task",
+        "description": "You try a relevant speaking task based on your goals (CELPIP practice, conversation, or interview simulation)"
+      },
+      "feedback": {
+        "title": "Feedback & Recommendation", 
+        "description": "I give you specific feedback and suggest next steps"
+      }
+    },
+    "booking": {
+      "badgeDesktop": "Open slots available • Limited time offer",
+      "badgeMobile": "Limited time offer",
+      "title": "Book Your Spot",
+      "description": "Pick a time that works for you",
+      "button": "Book Free Trial",
+      "comparePrice": "CA$15",
+      "currentPrice": "FREE",
+      "note": "Instant confirmation • No waiting"
+    }
+  },
+  "services": {
+    "title": "How I Can Help You",
+    "subtitle": "CELPIP preparation • General English for immigration • Interview coaching",
+    "speakingClub": {
+      "title": "Speaking Club",
+      "type": "Group Sessions",
+      "popular": "Most Popular",
+      "description": "CELPIP-focused and General English speaking practice in small groups. Build confidence with other learners at your level.",
+      "features": [
+        "CELPIP speaking tasks practice",
+        "General English conversation skills", 
+        "Small group setting",
+        "Structured feedback sessions",
+        "Weekly practice schedule"
+      ],
+      "urgency": "Limited spots available for September 2025",
+      "price": "From CAD $15 per session"
+    },
+    "oneOnOne": {
+      "title": "1-on-1 Lessons",
+      "type": "Private",
+      "description": "Personalized CELPIP preparation, general English, or interview coaching tailored to your specific needs.",
+      "features": [
+        "CELPIP test preparation (all 4 skills)",
+        "General English for immigration",
+        "Job interview preparation", 
+        "Flexible scheduling",
+        "Intensive feedback and progress tracking"
+      ],
+      "price": "From CAD $35 per session"
+    },
+    "paired": {
+      "title": "Paired Lessons",
+      "type": "2 Students", 
+      "description": "Semi-private lessons for you and a friend or partner. More personal than group, more affordable than 1-on-1.",
+      "features": [
+        "Share lessons with a partner",
+        "CELPIP or general English focus",
+        "Conversation practice together",
+        "Individual and pair feedback",
+        "Cost-effective option"
+      ],
+      "price": "From CAD $25 per session (each)"
+    }
+  },
+  "newsletter": {
+    "title": "Get CELPIP Tips & Updates",
+    "subtitle": "Get weekly CELPIP tips, practice questions, and news about upcoming classes",
+    "placeholder": "Enter your email address",
+    "button": "Subscribe",
+    "privacy": "No spam. Unsubscribe anytime."
+  },
+  "finalCta": {
+    "title": "Ready to Improve Your English?",
+    "description": "Book your free trial lesson now. I'll help you understand exactly where you are and what you need to do to reach your CELPIP goals.",
+    "button": "Book Your FREE Trial Lesson",
+    "details": {
+      "duration": "25 minutes",
+      "price": "Completely FREE", 
+      "commitment": "No commitment"
+    }
+  },
+  "footer": {
+    "title": "Masha - English Teacher",
+    "description": "Professional English instruction with a focus on results",
+    "credentials": "TESOL Certified • Cambridge Business English • CELPIP Instructor",
+    "connect": "Connect With Me",
+    "email": "masha.dolda@gmail.com",
+    "whatsapp": "WhatsApp: +1 (672) 338-0172",
+    "linkedin": "LinkedIn",
+    "instagram": "@masha.english.tutor"
+  },
+  "language": {
+    "en": "EN",
+    "ru": "RU", 
+    "uk": "UK",
+    "es": "ES",
+    "zh": "ZH"
+  }
+}

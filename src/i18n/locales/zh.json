@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "logo": "玛莎英语老师",
+    "about": "关于我",
+    "services": "服务", 
+    "reviews": "评价",
+    "freeTrial": "免费试课",
+    "bookNow": "立即预约"
+  },
+  "hero": {
+    "title": "通过CELPIP考试，获得加拿大永久居留权",
+    "titleHighlight": " 专家指导",
+    "subtitle": "我是玛莎，您的TESOL认证英语讲师，居住在加拿大🇨🇦。我帮助像您一样的移民通过经过验证的教学方法取得CELPIP成功，并提高英语水平以适应加拿大生活。",
+    "ctaButton": "试试免费课程",
+    "trialInfo": "25分钟试课 • 看看我们是否合适",
+    "freeBadge": "免费",
+    "profileName": "玛莎",
+    "rating": "Preply上的5星超级导师",
+    "credentials": {
+      "tesol": "TESOL",
+      "celpip": "CELPIP", 
+      "cambridge": "剑桥"
+    }
+  },
+  "about": {
+    "title": "为什么选择我？",
+    "lead": "我帮助移民通过CELPIP考试，并通过<strong>经过验证的有效方法</strong>提高英语水平。我的学生持续提高他们的CLB水平，因为我专注于真正有效的方法。",
+    "qualities": {
+      "results": {
+        "title": "以结果为导向的教学",
+        "description": "每节课都有明确的目标。您将确切知道自己在学什么以及为什么要学。"
+      },
+      "feedback": {
+        "title": "个性化反馈", 
+        "description": "我识别您的具体薄弱点，并为您提供改进的明确计划。"
+      },
+      "journey": {
+        "title": "我理解您的学习之路",
+        "description": "我会说乌克兰语和俄语，并且教过来自许多国家的学生。我了解每个国籍面临的具体挑战，以及为了更快进步应该专注于什么。"
+      },
+      "interview": {
+        "title": "面试准备",
+        "description": "凭借我的剑桥商务英语认证和在加拿大的人力资源经验，我帮助您准备工作面试和专业沟通。"
+      }
+    },
+    "credentials": {
+      "title": "专业资质",
+      "tesol": {
+        "title": "TESOL文凭",
+        "description": "加拿大 - 对外英语教学"
+      },
+      "celpip": {
+        "title": "官方CELPIP讲师", 
+        "description": "认证为加拿大移民英语考试学生准备考试"
+      },
+      "cambridge": {
+        "title": "剑桥商务英语",
+        "description": "专业沟通和面试准备专家"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "学生评价",
+    "subtitle": "我帮助过的学生的真实反馈",
+    "swipeHint": "← 滑动查看更多评价 →",
+    "preplyBadge": "Preply上45+条正面评价",
+    "reviews": [
+      {
+        "text": "到目前为止我们已经上了大约十节课，我的主要目标是准备CELPIP英语考试。玛莎制定了一个出色的学习计划，帮助我改善薄弱环节。她总是很准时，我很高兴继续跟她学习。她的方法有条理且专注，这让我在临近考试日期时更有信心。",
+        "author": "玛丽亚",
+        "role": "CELPIP学生"
+      },
+      {
+        "text": "玛莎是一位很棒的老师，自从我开始跟她学习以来，我看到了我的英语水平在提高，所有的课程都非常高效和实用。她很友善、耐心，总是心情很好。强烈推荐！",
+        "author": "维多利亚", 
+        "role": "CELPIP学生"
+      },
+      {
+        "text": "玛莎是一位非常专业的导师。当我们进行对话时，她也在检查我的英语，立即向我指出我的错误。她真的关心我在英语方面的进步和建立我在沟通中的信心。",
+        "author": "伊万娜",
+        "role": "英语学生"
+      }
+    ]
+  },
+  "trial": {
+    "title": "预约您的免费试课",
+    "subtitle": "25分钟看看我们是否合适 • 无需承诺",
+    "processTitle": "试课内容<br />安排",
+    "steps": {
+      "assessment": {
+        "title": "评估",
+        "description": "我评估您当前的英语水平和具体目标（CELPIP、通用英语或工作面试）"
+      },
+      "practice": {
+        "title": "练习任务",
+        "description": "您根据目标尝试相关的口语任务（CELPIP练习、对话或面试模拟）"
+      },
+      "feedback": {
+        "title": "反馈与建议", 
+        "description": "我给您具体的反馈并建议下一步行动"
+      }
+    },
+    "booking": {
+      "badgeDesktop": "有空档可预约 • 限时优惠",
+      "badgeMobile": "限时优惠",
+      "title": "预约您的位置",
+      "description": "选择适合您的时间",
+      "button": "预约免费试课",
+      "comparePrice": "CA$15",
+      "currentPrice": "免费",
+      "note": "即时确认 • 无需等待"
+    }
+  },
+  "services": {
+    "title": "我如何帮助您",
+    "subtitle": "CELPIP准备 • 移民通用英语 • 面试指导",
+    "speakingClub": {
+      "title": "口语俱乐部",
+      "type": "小组课程",
+      "popular": "最受欢迎",
+      "description": "专注于CELPIP和通用英语的小组口语练习。与您同水平的其他学习者一起建立信心。",
+      "features": [
+        "CELPIP口语任务练习",
+        "通用英语会话技能", 
+        "小组设置",
+        "结构化反馈环节",
+        "每周练习安排"
+      ],
+      "urgency": "2025年9月名额有限",
+      "price": "每节课CAD $15起"
+    },
+    "oneOnOne": {
+      "title": "一对一课程",
+      "type": "私人课程",
+      "description": "根据您的具体需求量身定制的个性化CELPIP准备、通用英语或面试指导。",
+      "features": [
+        "CELPIP考试准备（全部4项技能）",
+        "移民通用英语",
+        "工作面试准备", 
+        "灵活安排时间",
+        "深入反馈和进度跟踪"
+      ],
+      "price": "每节课CAD $35起"
+    },
+    "paired": {
+      "title": "双人课程",
+      "type": "2名学生", 
+      "description": "您和朋友或伴侣的半私人课程。比小组课更个人化，比一对一更实惠。",
+      "features": [
+        "与伙伴共享课程",
+        "专注CELPIP或通用英语",
+        "一起练习对话",
+        "个人和双人反馈",
+        "性价比高的选择"
+      ],
+      "price": "每节课CAD $25起（每人）"
+    }
+  },
+  "newsletter": {
+    "title": "获取CELPIP技巧和更新",
+    "subtitle": "获得每周CELPIP技巧、练习题和即将开课的消息",
+    "placeholder": "输入您的邮箱地址",
+    "button": "订阅",
+    "privacy": "无垃圾邮件。随时取消订阅。"
+  },
+  "finalCta": {
+    "title": "准备好提高您的英语了吗？",
+    "description": "现在就预约您的免费试课。我将帮助您准确了解自己的水平以及需要做什么来达到CELPIP目标。",
+    "button": "预约您的免费试课",
+    "details": {
+      "duration": "25分钟",
+      "price": "完全免费", 
+      "commitment": "无需承诺"
+    }
+  },
+  "footer": {
+    "title": "玛莎 - 英语老师",
+    "description": "专注于结果的专业英语教学",
+    "credentials": "TESOL认证 • 剑桥商务英语 • CELPIP讲师",
+    "connect": "联系我",
+    "email": "masha.dolda@gmail.com",
+    "whatsapp": "WhatsApp: +1 (672) 338-0172",
+    "linkedin": "LinkedIn",
+    "instagram": "@masha.english.tutor"
+  },
+  "language": {
+    "en": "EN",
+    "ru": "RU", 
+    "uk": "UK",
+    "es": "ES",
+    "zh": "ZH"
+  }
+}

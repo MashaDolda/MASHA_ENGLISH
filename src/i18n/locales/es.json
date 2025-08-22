@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "logo": "Masha Profesora de Inglés",
+    "about": "Acerca de",
+    "services": "Servicios", 
+    "reviews": "Reseñas",
+    "freeTrial": "Clase Gratis",
+    "bookNow": "Reservar"
+  },
+  "hero": {
+    "title": "Aprueba CELPIP y Obtén tu PR Canadiense",
+    "titleHighlight": " con Orientación Experta",
+    "subtitle": "Soy Masha, tu instructora de inglés certificada TESOL que vive en Canadá 🇨🇦. Ayudo a inmigrantes como tú a lograr el éxito en CELPIP y mejorar el inglés para la vida canadiense con métodos de enseñanza probados.",
+    "ctaButton": "Prueba una Clase GRATIS",
+    "trialInfo": "Clase de 25 minutos • Veamos si somos compatibles",
+    "freeBadge": "GRATIS",
+    "profileName": "Masha",
+    "rating": "Super Tutora de 5 Estrellas en Preply",
+    "credentials": {
+      "tesol": "TESOL",
+      "celpip": "CELPIP", 
+      "cambridge": "Cambridge"
+    }
+  },
+  "about": {
+    "title": "¿Por qué trabajar conmigo?",
+    "lead": "Ayudo a inmigrantes a aprobar CELPIP y mejorar su inglés con <strong>métodos probados que dan resultados.</strong> Mis estudiantes mejoran consistentemente sus niveles CLB porque me enfoco en lo que realmente funciona.",
+    "qualities": {
+      "results": {
+        "title": "Enseñanza Enfocada en Resultados",
+        "description": "Cada lección tiene un objetivo claro. Sabrás exactamente qué estás aprendiendo y por qué."
+      },
+      "feedback": {
+        "title": "Retroalimentación Personalizada", 
+        "description": "Identifico tus puntos débiles específicos y te doy un plan claro para mejorarlos."
+      },
+      "journey": {
+        "title": "Entiendo tu Viaje",
+        "description": "Hablo ucraniano y ruso, y he enseñado a estudiantes de muchos países. Conozco los desafíos específicos que enfrenta cada nacionalidad y en qué enfocarse para una mejora más rápida."
+      },
+      "interview": {
+        "title": "Preparación para Entrevistas",
+        "description": "Con mi certificación Cambridge Business English y experiencia en RRHH en Canadá, te ayudo a prepararte para entrevistas de trabajo y comunicación profesional."
+      }
+    },
+    "credentials": {
+      "title": "Credenciales Profesionales",
+      "tesol": {
+        "title": "Diploma TESOL",
+        "description": "Canadá - Enseñanza de Inglés a Hablantes de Otros Idiomas"
+      },
+      "celpip": {
+        "title": "Instructor Oficial CELPIP", 
+        "description": "Certificado para preparar estudiantes para exámenes de inglés de inmigración canadiense"
+      },
+      "cambridge": {
+        "title": "Cambridge Business English",
+        "description": "Especialista en comunicación profesional y preparación para entrevistas"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen mis estudiantes",
+    "subtitle": "Comentarios reales de estudiantes a los que he ayudado",
+    "swipeHint": "← Desliza para ver más reseñas →",
+    "preplyBadge": "45+ reseñas positivas en Preply",
+    "reviews": [
+      {
+        "text": "Hemos tenido alrededor de diez lecciones hasta ahora, y mi objetivo principal es prepararme para el examen de inglés CELPIP. Masha ha creado un excelente plan de estudio y me ayuda con mis áreas débiles. Siempre es puntual, y estoy feliz de continuar aprendiendo con ella. Su enfoque es organizado y enfocado, lo que me da confianza mientras me acerco a mi fecha de examen.",
+        "author": "Mariia",
+        "role": "Estudiante CELPIP"
+      },
+      {
+        "text": "Masha es una gran maestra, desde que comencé a aprender con ella he visto mejorar mi nivel de inglés, todas las clases son muy productivas y prácticas. Es amable, paciente y siempre está de buen humor. ¡Muy recomendada!",
+        "author": "Viktoriia", 
+        "role": "Estudiante CELPIP"
+      },
+      {
+        "text": "Masha es una tutora muy profesional. Mientras hacemos conversaciones, también está revisando mi inglés, inmediatamente me señala mis errores. Realmente se preocupa por mi progreso en inglés y por construir mi confianza en la comunicación.",
+        "author": "Ivanna",
+        "role": "Estudiante de Inglés"
+      }
+    ]
+  },
+  "trial": {
+    "title": "Reserva tu Clase de Prueba Gratuita",
+    "subtitle": "25 minutos para ver si somos compatibles • Sin compromiso requerido",
+    "processTitle": "Qué Sucede<br />en tu Prueba",
+    "steps": {
+      "assessment": {
+        "title": "Evaluación",
+        "description": "Evalúo tu nivel actual de inglés y tus objetivos específicos (CELPIP, inglés general o entrevistas de trabajo)"
+      },
+      "practice": {
+        "title": "Tarea Práctica",
+        "description": "Intentas una tarea de habla relevante basada en tus objetivos (práctica CELPIP, conversación o simulación de entrevista)"
+      },
+      "feedback": {
+        "title": "Retroalimentación y Recomendación", 
+        "description": "Te doy retroalimentación específica y sugiero próximos pasos"
+      }
+    },
+    "booking": {
+      "badgeDesktop": "Horarios disponibles • Oferta por tiempo limitado",
+      "badgeMobile": "Oferta por tiempo limitado",
+      "title": "Reserva tu Lugar",
+      "description": "Elige un horario que funcione para ti",
+      "button": "Reservar Prueba Gratuita",
+      "comparePrice": "CA$15",
+      "currentPrice": "GRATIS",
+      "note": "Confirmación instantánea • Sin espera"
+    }
+  },
+  "services": {
+    "title": "Cómo puedo ayudarte",
+    "subtitle": "Preparación CELPIP • Inglés general para inmigración • Coaching para entrevistas",
+    "speakingClub": {
+      "title": "Club de Conversación",
+      "type": "Sesiones Grupales",
+      "popular": "Más Popular",
+      "description": "Práctica de inglés hablado enfocada en CELPIP e inglés general en grupos pequeños. Construye confianza con otros estudiantes de tu nivel.",
+      "features": [
+        "Práctica de tareas de habla CELPIP",
+        "Habilidades de conversación en inglés general", 
+        "Grupos pequeños",
+        "Sesiones estructuradas de retroalimentación",
+        "Horario semanal de práctica"
+      ],
+      "urgency": "Lugares limitados disponibles para septiembre 2025",
+      "price": "Desde CAD $15 por sesión"
+    },
+    "oneOnOne": {
+      "title": "Clases Individuales",
+      "type": "Privadas",
+      "description": "Preparación personalizada para CELPIP, inglés general o coaching para entrevistas adaptado a tus necesidades específicas.",
+      "features": [
+        "Preparación para examen CELPIP (las 4 habilidades)",
+        "Inglés general para inmigración",
+        "Preparación para entrevistas de trabajo", 
+        "Horario flexible",
+        "Retroalimentación intensiva y seguimiento del progreso"
+      ],
+      "price": "Desde CAD $35 por sesión"
+    },
+    "paired": {
+      "title": "Clases en Pareja",
+      "type": "2 Estudiantes", 
+      "description": "Lecciones semi-privadas para ti y un amigo o pareja. Más personal que grupal, más asequible que individual.",
+      "features": [
+        "Comparte lecciones con un compañero",
+        "Enfoque en CELPIP o inglés general",
+        "Práctica de conversación juntos",
+        "Retroalimentación individual y en pareja",
+        "Opción costo-efectiva"
+      ],
+      "price": "Desde CAD $25 por sesión (cada uno)"
+    }
+  },
+  "newsletter": {
+    "title": "Recibe Consejos y Actualizaciones de CELPIP",
+    "subtitle": "Recibe consejos semanales de CELPIP, preguntas de práctica y noticias sobre próximas clases",
+    "placeholder": "Ingresa tu dirección de email",
+    "button": "Suscribirse",
+    "privacy": "Sin spam. Cancela en cualquier momento."
+  },
+  "finalCta": {
+    "title": "¿Listo para mejorar tu inglés?",
+    "description": "Reserva tu clase de prueba gratuita ahora. Te ayudaré a entender exactamente dónde estás y qué necesitas hacer para alcanzar tus objetivos CELPIP.",
+    "button": "Reserva tu Clase de Prueba GRATUITA",
+    "details": {
+      "duration": "25 minutos",
+      "price": "Completamente GRATIS", 
+      "commitment": "Sin compromiso"
+    }
+  },
+  "footer": {
+    "title": "Masha - Profesora de Inglés",
+    "description": "Instrucción profesional de inglés con enfoque en resultados",
+    "credentials": "Certificada TESOL • Cambridge Business English • Instructora CELPIP",
+    "connect": "Conéctate conmigo",
+    "email": "masha.dolda@gmail.com",
+    "whatsapp": "WhatsApp: +1 (672) 338-0172",
+    "linkedin": "LinkedIn",
+    "instagram": "@masha.english.tutor"
+  },
+  "language": {
+    "en": "EN",
+    "ru": "RU", 
+    "uk": "UK",
+    "es": "ES",
+    "zh": "ZH"
+  }
+}
