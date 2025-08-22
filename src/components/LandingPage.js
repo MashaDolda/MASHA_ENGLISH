@@ -423,36 +423,18 @@ const LandingPage = () => {
 
 
       {/* Kit Newsletter Section */}
-      <section className="newsletter-signup">
+      <section className="newsletter-signup" id="newsletter">
         <div className="container">
-          <div className="kit-form-container">
-            <h2>Get CELPIP Tips & Updates</h2>
-            <p>Get weekly CELPIP tips, practice questions, and news about upcoming classes</p>
-            
-            {/* Direct Kit Form - Guaranteed to work */}
-            <form 
-              action="https://app.convertkit.com/forms/eb182a35a6/subscriptions" 
-              method="post"
-              data-sv-form="eb182a35a6"
-              data-uid="eb182a35a6"
-              data-format="inline"
-              data-version="5"
-              className="kit-direct-form"
-            >
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email_address"
-                  placeholder="Enter your email address"
-                  required
-                  className="email-input-kit"
-                />
-                <button type="submit" className="subscribe-btn-kit">
-                  Subscribe
-                </button>
-              </div>
-              <p className="privacy-text">No spam. Unsubscribe anytime.</p>
-            </form>
+          {/* Kit will automatically inject form here */}
+          <div 
+            className="kit-form-wrapper" 
+            data-kit-form="eb182a35a6"
+            style={{textAlign: 'center', padding: '2rem 0'}}
+          >
+            {/* Kit form will appear here after script loads */}
+            <div style={{color: '#666', padding: '1rem'}}>
+              Loading form...
+            </div>
           </div>
         </div>
       </section>

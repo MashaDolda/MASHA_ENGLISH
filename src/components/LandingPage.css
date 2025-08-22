@@ -2122,98 +2122,16 @@ html {
   background: var(--color-text-secondary);
 }
 
-/* Direct Kit Form Styling */
-.kit-form-container {
+/* Kit Form Wrapper - Minimal styling */
+.kit-form-wrapper {
   margin: var(--spacing-2xl) 0;
-  text-align: center;
+  min-height: 200px;
+}
+
+/* Let Kit handle all form styling */
+.kit-form-wrapper .formkit-form {
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.kit-form-container h2 {
-  font-size: var(--font-size-4xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
-}
-
-.kit-form-container p {
-  font-size: var(--font-size-lg);
-  color: var(--text-secondary);
-  margin-bottom: var(--spacing-xl);
-}
-
-.kit-direct-form {
-  margin: var(--spacing-xl) 0;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  max-width: 400px;
   margin: 0 auto;
-}
-
-.email-input-kit {
-  padding: var(--spacing-lg);
-  border: 2px solid var(--border-light);
-  border-radius: var(--border-radius);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family);
-  background: white;
-  transition: border-color 0.3s ease;
-  width: 100%;
-}
-
-.email-input-kit:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.subscribe-btn-kit {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: var(--spacing-lg) var(--spacing-xl);
-  border-radius: var(--border-radius);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-.subscribe-btn-kit:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.privacy-text {
-  font-size: var(--font-size-sm);
-  color: var(--text-light);
-  margin-top: var(--spacing-md);
-  margin-bottom: 0;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .kit-form-container h2 {
-    font-size: var(--font-size-3xl);
-  }
-  
-  .kit-form-container p {
-    font-size: var(--font-size-base);
-  }
-  
-  .form-group {
-    max-width: 100%;
-    padding: 0 var(--spacing-md);
-  }
 }
 
 .newsletter-benefits {
