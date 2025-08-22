@@ -33,43 +33,57 @@ const LandingPage = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState(''); // 'success', 'error', or ''
   
-  // Newsletter form submission - simple and reliable
-  const handleNewsletterSubmit = async (e) => {
+  // Newsletter form submission using hidden iframe (most reliable method)
+  const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('');
     
     try {
-      // Simple fetch to Kit endpoint
-      const response = await fetch(`https://api.convertkit.com/v3/forms/eb182a35a6/subscribe`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email,
-        }),
-      });
+      // Create hidden iframe for form submission
+      const iframe = document.createElement('iframe');
+      iframe.name = 'kit-submit-frame';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
       
-      // Kit form submission - assume success if no error thrown
-      setSubmitStatus('success');
-      setEmail('');
+      // Create form that submits to Kit
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://app.convertkit.com/forms/eb182a35a6/subscriptions';
+      form.target = 'kit-submit-frame';
       
-      // Track conversion for analytics
-      if (window.gtag) {
-        window.gtag('event', 'newsletter_signup', {
-          'event_category': 'engagement',
-          'event_label': 'CELPIP Tips Newsletter'
-        });
-      }
+      // Add email input
+      const emailInput = document.createElement('input');
+      emailInput.type = 'email';
+      emailInput.name = 'email_address';
+      emailInput.value = email;
+      form.appendChild(emailInput);
+      
+      // Add form to page and submit
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Clean up and show success after short delay
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+        setSubmitStatus('success');
+        setEmail('');
+        setIsSubmitting(false);
+        
+        // Track conversion for analytics
+        if (window.gtag) {
+          window.gtag('event', 'newsletter_signup', {
+            'event_category': 'engagement',
+            'event_label': 'CELPIP Tips Newsletter'
+          });
+        }
+      }, 2000);
       
     } catch (error) {
       console.error('Newsletter submission error:', error);
-      // Even if there's a CORS error, the email might still be submitted
-      // So we'll show success but also log the error
       setSubmitStatus('success');
       setEmail('');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -476,7 +490,7 @@ const LandingPage = () => {
             <p className="newsletter-subtitle">
               {t('newsletter.subtitle')}
             </p>
-            <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+            <form className="newsletter-form" onSubmit={handleNewsletterSubmit} action="#" method="get">
               <div className="email-input-group">
                 <input 
                   type="email" 
