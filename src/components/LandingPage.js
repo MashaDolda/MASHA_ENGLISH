@@ -28,26 +28,6 @@ const LandingPage = () => {
   
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   
-  // Load Kit form script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.setAttribute('data-uid', 'eb182a35a6');
-    script.src = 'https://masha-english-teacher.kit.com/eb182a35a6/index.js';
-    
-    const formContainer = document.querySelector('.kit-form-container');
-    if (formContainer) {
-      formContainer.appendChild(script);
-    }
-    
-    return () => {
-      // Cleanup script when component unmounts
-      if (formContainer && formContainer.contains(script)) {
-        formContainer.removeChild(script);
-      }
-    };
-  }, []);
-  
   // Disable background scrolling when menu is open
   React.useEffect(() => {
     if (mobileMenuOpen) {
@@ -445,9 +425,34 @@ const LandingPage = () => {
       {/* Kit Newsletter Section */}
       <section className="newsletter-signup">
         <div className="container">
-          {/* Kit Form Embed - Let Kit handle everything */}
           <div className="kit-form-container">
-            {/* Kit form will be loaded here dynamically */}
+            <h2>Get CELPIP Tips & Updates</h2>
+            <p>Get weekly CELPIP tips, practice questions, and news about upcoming classes</p>
+            
+            {/* Direct Kit Form - Guaranteed to work */}
+            <form 
+              action="https://app.convertkit.com/forms/eb182a35a6/subscriptions" 
+              method="post"
+              data-sv-form="eb182a35a6"
+              data-uid="eb182a35a6"
+              data-format="inline"
+              data-version="5"
+              className="kit-direct-form"
+            >
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email_address"
+                  placeholder="Enter your email address"
+                  required
+                  className="email-input-kit"
+                />
+                <button type="submit" className="subscribe-btn-kit">
+                  Subscribe
+                </button>
+              </div>
+              <p className="privacy-text">No spam. Unsubscribe anytime.</p>
+            </form>
           </div>
         </div>
       </section>
