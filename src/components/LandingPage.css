@@ -2122,6 +2122,96 @@ html {
   background: var(--color-text-secondary);
 }
 
+/* Kit Form Integration Styles */
+.kit-form-container {
+  margin: var(--spacing-xl) 0;
+}
+
+/* Style the Kit form to match your website design */
+.kit-form-container form {
+  max-width: 100%;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.kit-form-container input[type="email"] {
+  width: 100% !important;
+  max-width: 400px !important;
+  padding: var(--spacing-lg) !important;
+  border: 2px solid var(--border-light) !important;
+  border-radius: var(--border-radius) !important;
+  font-size: var(--font-size-base) !important;
+  font-family: var(--font-family) !important;
+  margin-bottom: var(--spacing-md) !important;
+  background: white !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.kit-form-container input[type="email"]:focus {
+  border-color: var(--primary-color) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.kit-form-container button {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border: none !important;
+  padding: var(--spacing-lg) var(--spacing-xl) !important;
+  border-radius: var(--border-radius) !important;
+  font-size: var(--font-size-base) !important;
+  font-family: var(--font-family) !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  max-width: 400px !important;
+}
+
+.kit-form-container button:hover {
+  background: var(--primary-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Success message styling */
+.kit-form-container .formkit-success {
+  background: #f0f9ff !important;
+  border: 1px solid var(--success-color) !important;
+  color: #065f46 !important;
+  padding: var(--spacing-md) !important;
+  border-radius: var(--border-radius) !important;
+  margin: var(--spacing-md) 0 !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+/* Error message styling */
+.kit-form-container .formkit-error {
+  background: #fef2f2 !important;
+  border: 1px solid #ef4444 !important;
+  color: #dc2626 !important;
+  padding: var(--spacing-md) !important;
+  border-radius: var(--border-radius) !important;
+  margin: var(--spacing-md) 0 !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+/* Hide Kit branding on free plan (optional) */
+.kit-form-container .formkit-powered-by {
+  text-align: center !important;
+  font-size: var(--font-size-xs) !important;
+  color: var(--text-light) !important;
+  margin-top: var(--spacing-md) !important;
+}
+
+.kit-form-container .formkit-powered-by a {
+  color: var(--text-light) !important;
+  text-decoration: none !important;
+}
+
 .newsletter-benefits {
   display: flex;
   justify-content: center;

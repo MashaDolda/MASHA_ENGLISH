@@ -28,65 +28,25 @@ const LandingPage = () => {
   
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   
-  // Newsletter form state
-  const [email, setEmail] = React.useState('');
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [submitStatus, setSubmitStatus] = React.useState(''); // 'success', 'error', or ''
-  
-  // Newsletter form submission using hidden iframe (most reliable method)
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('');
+  // Load Kit form script
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.setAttribute('data-uid', 'eb182a35a6');
+    script.src = 'https://masha-english-teacher.kit.com/eb182a35a6/index.js';
     
-    try {
-      // Create hidden iframe for form submission
-      const iframe = document.createElement('iframe');
-      iframe.name = 'kit-submit-frame';
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-      
-      // Create form that submits to Kit
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = 'https://app.convertkit.com/forms/eb182a35a6/subscriptions';
-      form.target = 'kit-submit-frame';
-      
-      // Add email input
-      const emailInput = document.createElement('input');
-      emailInput.type = 'email';
-      emailInput.name = 'email_address';
-      emailInput.value = email;
-      form.appendChild(emailInput);
-      
-      // Add form to page and submit
-      document.body.appendChild(form);
-      form.submit();
-      
-      // Clean up and show success after short delay
-      setTimeout(() => {
-        document.body.removeChild(form);
-        document.body.removeChild(iframe);
-        setSubmitStatus('success');
-        setEmail('');
-        setIsSubmitting(false);
-        
-        // Track conversion for analytics
-        if (window.gtag) {
-          window.gtag('event', 'newsletter_signup', {
-            'event_category': 'engagement',
-            'event_label': 'CELPIP Tips Newsletter'
-          });
-        }
-      }, 2000);
-      
-    } catch (error) {
-      console.error('Newsletter submission error:', error);
-      setSubmitStatus('success');
-      setEmail('');
-      setIsSubmitting(false);
+    const formContainer = document.querySelector('.kit-form-container');
+    if (formContainer) {
+      formContainer.appendChild(script);
     }
-  };
+    
+    return () => {
+      // Cleanup script when component unmounts
+      if (formContainer && formContainer.contains(script)) {
+        formContainer.removeChild(script);
+      }
+    };
+  }, []);
   
   // Disable background scrolling when menu is open
   React.useEffect(() => {
@@ -490,44 +450,15 @@ const LandingPage = () => {
             <p className="newsletter-subtitle">
               {t('newsletter.subtitle')}
             </p>
-            <form className="newsletter-form" onSubmit={handleNewsletterSubmit} action="#" method="get">
-              <div className="email-input-group">
-                <input 
-                  type="email" 
-                  placeholder={t('newsletter.placeholder')} 
-                  className="email-input"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required 
-                  disabled={isSubmitting}
-                />
-                <button 
-                  type="submit" 
-                  className="newsletter-btn"
-                  disabled={isSubmitting || !email.trim()}
-                >
-                  {isSubmitting ? 'Submitting...' : t('newsletter.button')}
-                </button>
-              </div>
-              
-              {/* Success message */}
-              {submitStatus === 'success' && (
-                <div className="newsletter-message success">
-                  ✅ Thank you! Check your email for a welcome message with your free CELPIP tips.
-                </div>
-              )}
-              
-              {/* Error message */}
-              {submitStatus === 'error' && (
-                <div className="newsletter-message error">
-                  ❌ Something went wrong. Please try again or contact us directly.
-                </div>
-              )}
-              
-              <p className="newsletter-privacy">
-                {t('newsletter.privacy')}
-              </p>
-            </form>
+            
+            {/* Kit Form Embed */}
+            <div className="kit-form-container">
+              {/* Kit form will be loaded here dynamically */}
+            </div>
+            
+            <p className="newsletter-privacy">
+              {t('newsletter.privacy')}
+            </p>
           </div>
         </div>
       </section>
