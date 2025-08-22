@@ -4,6 +4,12 @@
 :root {
   --primary-color: #2563eb;
   --primary-dark: #1d4ed8;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-white: #ffffff;
+  --color-text: #374151;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
   --accent-color: #06b6d4;
   --accent-light: #e0f7fa;
   --success-color: #10b981;
@@ -1757,7 +1763,7 @@ html {
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--spacing-sm);
+  padding: 0.5rem;
   z-index: 1001;
   min-height: 44px;
   min-width: 44px;
@@ -1776,7 +1782,7 @@ html {
 .hamburger span {
   display: block;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--color-primary);
   transition: all 0.3s ease;
   transform-origin: center;
 }
@@ -1799,47 +1805,57 @@ html {
   top: 100%;
   left: 0;
   width: 100%;
-  background: var(--background-white);
-  box-shadow: var(--shadow-lg);
-  padding: var(--spacing-lg);
+  background: #ffffff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
   z-index: 1000;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid #e5e7eb;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.mobile-menu.mobile-menu-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .mobile-nav-link {
-  color: var(--text-secondary);
+  color: #6b7280;
   font-weight: 500;
   text-decoration: none;
-  padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--border-light);
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
   transition: color 0.2s ease;
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
 }
 
 .mobile-nav-link:hover {
-  color: var(--primary-color);
+  color: #2563eb;
 }
 
 .mobile-nav-cta {
-  background: var(--primary-color);
-  color: white;
+  background: #2563eb;
+  color: #ffffff;
   border: none;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-md);
+  border-radius: 8px;
+  padding: 1rem;
   font-weight: 600;
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   cursor: pointer;
   transition: background 0.2s ease;
-  margin-top: var(--spacing-sm);
+  margin-top: 0.5rem;
   min-height: 48px;
   width: 100%;
   text-align: center;
 }
 
 .mobile-nav-cta:hover {
-  background: var(--primary-dark);
+  background: #1d4ed8;
 }
 
 /* Newsletter Signup Styles */
@@ -2017,11 +2033,33 @@ html {
   }
   
   .mobile-menu-toggle {
-    display: block;
+    display: flex !important;
   }
   
   .mobile-menu {
-    display: flex;
+    display: flex !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+    padding: 1.5rem !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    z-index: 1000 !important;
+    border-top: 1px solid #e5e7eb !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .mobile-menu.mobile-menu-open {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
   }
   
   /* Mobile Navigation Layout */
