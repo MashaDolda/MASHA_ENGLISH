@@ -1710,6 +1710,7 @@ html {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .nav-content {
@@ -1717,11 +1718,13 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg) 0;
+  position: relative;
+  width: 100%;
 }
 
 .nav-logo span {
-  font-size: var(--font-size-xl);
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
   color: var(--primary-color);
 }
 
@@ -1763,12 +1766,15 @@ html {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   z-index: 1001;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px;
+  min-width: 48px;
   align-items: center;
   justify-content: center;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .hamburger {
@@ -1777,14 +1783,17 @@ html {
   gap: 4px;
   width: 24px;
   height: 18px;
+  position: relative;
 }
 
 .hamburger span {
   display: block;
-  height: 2px;
+  height: 3px;
+  width: 100%;
   background: var(--color-primary);
   transition: all 0.3s ease;
   transform-origin: center;
+  border-radius: 1px;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -1800,28 +1809,33 @@ html {
 }
 
 .mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
+  display: flex;
+  position: fixed;
+  top: 70px;
   left: 0;
+  right: 0;
   width: 100%;
   background: #ffffff;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 1.5rem;
   flex-direction: column;
   gap: 1rem;
-  z-index: 1000;
+  z-index: 999999;
   border-top: 1px solid #e5e7eb;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
   pointer-events: none;
+  visibility: hidden;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
 }
 
 .mobile-menu.mobile-menu-open {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  visibility: visible;
 }
 
 .mobile-nav-link {
@@ -2029,51 +2043,77 @@ html {
 @media screen and (max-width: 768px) {
   /* Mobile Navigation */
   .nav-links {
-    display: none;
+    display: none !important;
   }
   
   .mobile-menu-toggle {
     display: flex !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0.75rem !important;
+    z-index: 1001 !important;
+    min-height: 48px !important;
+    min-width: 48px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
   }
   
   .mobile-menu {
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
+    display: flex !important;
+    position: fixed !important;
+    top: 70px !important;
     left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
     background: #ffffff !important;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
     padding: 1.5rem !important;
     flex-direction: column !important;
     gap: 1rem !important;
-    z-index: 1000 !important;
+    z-index: 999999 !important;
     border-top: 1px solid #e5e7eb !important;
     opacity: 0 !important;
     transform: translateY(-10px) !important;
     pointer-events: none !important;
     transition: all 0.3s ease !important;
+    visibility: hidden !important;
+    max-height: calc(100vh - 70px) !important;
+    overflow-y: auto !important;
   }
   
   .mobile-menu.mobile-menu-open {
-    display: flex !important;
     opacity: 1 !important;
     transform: translateY(0) !important;
     pointer-events: auto !important;
+    visibility: visible !important;
+    display: flex !important;
   }
+  
+
   
   /* Mobile Navigation Layout */
   .main-nav {
     position: relative;
+    overflow: visible !important;
+  }
+  
+  .main-nav .container {
+    overflow: visible !important;
   }
   
   .nav-content {
     padding: var(--spacing-sm) 0;
+    position: relative !important;
+    overflow: visible !important;
   }
   
   .nav-logo span {
-    font-size: var(--font-size-base);
-    font-weight: 600;
+    font-size: var(--font-size-xl) !important;
+    font-weight: 800 !important;
   }
   
   .nav-cta {
@@ -3338,11 +3378,7 @@ html {
     display: flex !important;
   }
   
-  /* Hide mobile menu elements on desktop */
-  .mobile-menu {
-    display: none !important;
-  }
-  
+  /* Hide mobile menu toggle on desktop */
   .mobile-menu-toggle {
     display: none !important;
   }

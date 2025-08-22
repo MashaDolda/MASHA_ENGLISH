@@ -18,7 +18,32 @@ const LandingPage = () => {
   
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  // Disable background scrolling when menu is open
+  React.useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.documentElement.style.overflow = '';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+  
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   return (
     <div className="landing-page">
@@ -37,7 +62,12 @@ const LandingPage = () => {
               <LanguageSwitcher />
               <button className="nav-cta" onClick={scrollToTrial}>{t('nav.bookNow')}</button>
             </div>
-            <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+            <button 
+              className="mobile-menu-toggle" 
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+              type="button"
+            >
               <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
                 <span></span>
                 <span></span>
@@ -45,14 +75,14 @@ const LandingPage = () => {
               </span>
             </button>
           </div>
-          <div className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`} style={{border: mobileMenuOpen ? '3px solid green' : '3px solid red'}}>
+        </div>
+        <div className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
             <a href="#about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</a>
             <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.services')}</a>
             <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.reviews')}</a>
             <a href="#trial" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.freeTrial')}</a>
             <LanguageSwitcher />
             <button className="mobile-nav-cta" onClick={() => {scrollToTrial(); setMobileMenuOpen(false);}}>{t('nav.bookNow')}</button>
-          </div>
         </div>
       </nav>
 
