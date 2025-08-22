@@ -1092,9 +1092,40 @@ p {
 }
 
 @media (max-width: 768px) {
+  /* Center the CTA button and improve details layout */
+  .final-cta .cta-primary {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+  
   .cta-details {
-    flex-direction: column;
-    gap: var(--spacing-md);
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: var(--spacing-sm) !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto !important;
+  }
+  
+  .cta-details .detail {
+    flex: 1 1 auto !important;
+    min-width: 90px !important;
+    max-width: 110px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: var(--spacing-sm) var(--spacing-xs) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--border-radius) !important;
+    font-size: var(--font-size-xs) !important;
+    flex-direction: column !important;
+  }
+  
+  .cta-details .icon {
+    font-size: var(--font-size-lg) !important;
+    margin-bottom: var(--spacing-xs) !important;
+    display: block !important;
   }
 }
 
@@ -1131,14 +1162,132 @@ p {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md) 0 !important;
+  }
+  
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     text-align: center;
   }
   
+  .footer-contact h4 {
+    margin-bottom: var(--spacing-sm) !important;
+    font-size: var(--font-size-base) !important;
+  }
+  
   .contact-methods {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--spacing-xs) !important;
+    justify-items: stretch !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .contact-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: var(--spacing-xs) !important;
+    padding: var(--spacing-xs) var(--spacing-xs) !important;
+    width: 100% !important;
+    background: var(--background-light) !important;
+    border-radius: var(--border-radius) !important;
+    font-size: var(--font-size-xs) !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    min-height: 40px !important;
+    text-align: center !important;
+    overflow: visible !important;
+  }
+  
+  .contact-item:hover {
+    background: var(--accent-light) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+  
+  .contact-icon {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .contact-item span:not(.contact-icon) {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    flex: 1 !important;
+    text-align: left !important;
+    min-width: 0 !important;
+  }
+  
+  /* Hide "WhatsApp:" text on mobile, show only number */
+  .contact-item[href*="wa.me"] span:not(.contact-icon) {
+    font-size: 0 !important;
+  }
+  
+  .contact-item[href*="wa.me"] span:not(.contact-icon)::after {
+    content: "+1 (672) 338-0172" !important;
+    font-size: var(--font-size-xs) !important;
+  }
+  
+  /* Make email shorter on mobile */
+  .contact-item[href*="mailto"] span:not(.contact-icon) {
+    font-size: 0 !important;
+  }
+  
+  .contact-item[href*="mailto"] span:not(.contact-icon)::after {
+    content: "masha.dolda@gmail.com" !important;
+    font-size: var(--font-size-xs) !important;
+  }
+}
+
+/* Extra small screens - single column for contacts */
+@media (max-width: 480px) {
+  .contact-methods {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-sm) !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  .contact-item {
+    justify-content: flex-start !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    font-size: var(--font-size-sm) !important;
+    min-height: 44px !important;
+  }
+  
+  .contact-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .landing-page .contact-methods {
+    grid-template-columns: 1fr !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  .landing-page .contact-item {
+    justify-content: flex-start !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    font-size: var(--font-size-sm) !important;
+    min-height: 44px !important;
+  }
+  
+  /* Extra small screens: ensure WhatsApp and email fixes apply */
+  .contact-item[href*="wa.me"] span:not(.contact-icon),
+  .landing-page .contact-item[href*="wa.me"] span:not(.contact-icon) {
+    font-size: 0 !important;
+  }
+  
+  .contact-item[href*="wa.me"] span:not(.contact-icon)::after,
+  .landing-page .contact-item[href*="wa.me"] span:not(.contact-icon)::after {
+    content: "+1 (672) 338-0172" !important;
+    font-size: var(--font-size-sm) !important;
   }
 }
 
@@ -2172,11 +2321,73 @@ html {
     gap: var(--spacing-md);
   }
   
-  /* Mobile Footer */
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    text-align: center;
+  /* Mobile Footer - Enhanced Layout */
+  .landing-page .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md) 0 !important;
+  }
+  
+  .landing-page .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+    text-align: center !important;
+  }
+  
+  .landing-page .footer-contact h4 {
+    margin-bottom: var(--spacing-sm) !important;
+    font-size: var(--font-size-base) !important;
+  }
+  
+  /* Better credentials text flow on mobile */
+  .landing-page .footer-credentials p {
+    font-size: var(--font-size-xs) !important;
+    line-height: 1.4 !important;
+    word-spacing: -0.05em !important;
+  }
+  
+  .landing-page .contact-methods {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--spacing-xs) !important;
+    justify-items: stretch !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .landing-page .contact-item {
+    width: 100% !important;
+    background: var(--background-light) !important;
+    border-radius: var(--border-radius) !important;
+    padding: var(--spacing-xs) !important;
+    justify-content: center !important;
+    gap: var(--spacing-xs) !important;
+    font-size: var(--font-size-xs) !important;
+    min-height: 40px !important;
+    overflow: visible !important;
+  }
+  
+  .landing-page .contact-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  /* Mobile: Hide WhatsApp prefix, show only number */
+  .landing-page .contact-item[href*="wa.me"] span:not(.contact-icon) {
+    font-size: 0 !important;
+  }
+  
+  .landing-page .contact-item[href*="wa.me"] span:not(.contact-icon)::after {
+    content: "+1 (672) 338-0172" !important;
+    font-size: var(--font-size-xs) !important;
+  }
+  
+  /* Mobile: Show full email */
+  .landing-page .contact-item[href*="mailto"] span:not(.contact-icon) {
+    font-size: 0 !important;
+  }
+  
+  .landing-page .contact-item[href*="mailto"] span:not(.contact-icon)::after {
+    content: "masha.dolda@gmail.com" !important;
+    font-size: var(--font-size-xs) !important;
   }
   
   /* Mobile Trial Section */
@@ -2605,6 +2816,19 @@ html {
     color: #374151 !important;
     padding: 0 0.5rem !important;
     position: relative !important;
+  }
+  
+  /* Prevent orphaned words like "results" at end of sentences */
+  .landing-page .about-intro .lead strong {
+    white-space: nowrap !important;
+  }
+  
+  /* Better text flow to prevent orphaned words */
+  .landing-page .about-intro .lead {
+    orphans: 2 !important;
+    widows: 2 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
   
   .landing-page .about-intro .lead::after {
@@ -3056,6 +3280,43 @@ html {
     color: #f97316 !important;
   }
   
+  /* Mobile Final CTA - Enhanced Layout */
+  .landing-page .final-cta .cta-primary {
+    margin: 0 auto var(--spacing-xl) auto !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+  
+  .landing-page .cta-details {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: var(--spacing-sm) !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto !important;
+  }
+  
+  .landing-page .cta-details .detail {
+    flex: 1 1 auto !important;
+    min-width: 90px !important;
+    max-width: 110px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: var(--spacing-sm) var(--spacing-xs) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--border-radius) !important;
+    font-weight: 500 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-direction: column !important;
+    font-size: var(--font-size-xs) !important;
+  }
+  
+  .landing-page .cta-details .icon {
+    font-size: var(--font-size-lg) !important;
+    margin-bottom: var(--spacing-xs) !important;
+    display: block !important;
+  }
+
   .landing-page .footer-content {
     grid-template-columns: 1fr !important;
   }
