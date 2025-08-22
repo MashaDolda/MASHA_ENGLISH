@@ -442,23 +442,12 @@ const LandingPage = () => {
 
 
 
-      {/* Email Newsletter Section */}
+      {/* Kit Newsletter Section */}
       <section className="newsletter-signup">
         <div className="container">
-          <div className="newsletter-content">
-            <h2>{t('newsletter.title')}</h2>
-            <p className="newsletter-subtitle">
-              {t('newsletter.subtitle')}
-            </p>
-            
-            {/* Kit Form Embed */}
-            <div className="kit-form-container">
-              {/* Kit form will be loaded here dynamically */}
-            </div>
-            
-            <p className="newsletter-privacy">
-              {t('newsletter.privacy')}
-            </p>
+          {/* Kit Form Embed - Let Kit handle everything */}
+          <div className="kit-form-container">
+            {/* Kit form will be loaded here dynamically */}
           </div>
         </div>
       </section>
