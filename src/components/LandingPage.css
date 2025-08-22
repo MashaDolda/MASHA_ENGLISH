@@ -822,10 +822,13 @@ p {
   .services-grid {
     grid-template-columns: 1fr;
     max-height: none;
+    overflow: visible;
   }
   
   .services {
     min-height: auto;
+    max-height: none;
+    overflow: visible;
   }
 }
 
@@ -2170,10 +2173,17 @@ html {
     font-size: var(--font-size-xs);
   }
   
-  /* Mobile Services Section */
+  /* Mobile Services Section - Fix nested scroll issue */
   .services {
-    min-height: auto;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
     padding: var(--spacing-lg) 0;
+  }
+  
+  .services .container {
+    max-height: none !important;
+    overflow: visible !important;
   }
   
   .services h2 {
@@ -2661,6 +2671,9 @@ html {
   
   .landing-page .services-grid {
     grid-template-columns: 1fr !important;
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
   }
   
   .landing-page .testimonials-grid {
