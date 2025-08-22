@@ -45,7 +45,7 @@ const LandingPage = () => {
               </span>
             </button>
           </div>
-          <div className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`} style={{border: mobileMenuOpen ? '3px solid green' : '3px solid red'}}>
             <a href="#about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</a>
             <a href="#services" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.services')}</a>
             <a href="#testimonials" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>{t('nav.reviews')}</a>
