@@ -4,15 +4,15 @@
     "about": "About",
     "services": "Services", 
     "reviews": "Reviews",
-    "freeTrial": "Free Trial",
+    "freeTrial": "Free Consultation",
     "bookNow": "Book Now"
   },
   "hero": {
     "title": "Pass CELPIP & Get Your Canadian PR",
     "titleHighlight": " with Expert Guidance",
-    "subtitle": "I'm Masha, your TESOL-certified English instructor living in Canada 🇨🇦. I help immigrants like you achieve CELPIP success and improve English for Canadian life with proven teaching methods.",
-    "ctaButton": "Try a FREE Lesson",
-    "trialInfo": "25-minute trial • See if we're a good fit",
+    "subtitle": "I'm Masha, your TESOL-certified English instructor living in Canada 🇨🇦🇺🇦. I help Russian-speaking and Ukrainian immigrants like you achieve CELPIP success and improve English for Canadian life with proven teaching methods.",
+    "ctaButton": "Schedule a Free 20-Minute Consultation",
+    "trialInfo": "Evaluate your English level and goals • No commitment required",
     "freeBadge": "FREE",
     "profileName": "Masha",
     "rating": "5 Star Super Tutor on Preply",
@@ -22,9 +22,17 @@
       "cambridge": "Cambridge"
     }
   },
+  "successStory": {
+    "title": "🎯 Real Student Success",
+    "score": "L7, R7, W8, S8 → L11, R11, W11, S8",
+    "quote": "This morning I got my score: L11, R11, W11, S8. I updated my Express Entry profile, got 520 points, and was drawn for PR the same day! Thank you, Masha, for your support and help 💖",
+    "testimonial": "I had a great experience preparing with Masha. She's patient, supportive, and always makes lessons useful and motivating. Her tips and practice materials really helped — I felt confident and well-prepared on exam day. I'd definitely recommend her to anyone aiming for a strong CELPIP score!",
+    "attribution": "— Former student, now Canadian PR applicant",
+    "subtitle": "With personalized feedback and structured practice, you can reach your target score too."
+  },
   "about": {
     "title": "Why Work With Me?",
-    "lead": "I help immigrants pass CELPIP and improve their English with proven methods that get results. My students consistently improve their CLB levels because I focus on what actually works.",
+    "lead": "I help Russian-speaking and Ukrainian immigrants pass CELPIP and improve their English with proven methods that get results. My students consistently improve their CLB levels because I focus on what actually works.",
     "qualities": {
       "results": {
         "title": "Results-Focused Teaching",
@@ -36,11 +44,11 @@
       },
       "journey": {
         "title": "I Understand Your Journey",
-        "description": "I speak Ukrainian and Russian, and I've taught students from many countries. I know the specific challenges each nationality faces and what to focus on for faster improvement."
+        "description": "I speak Ukrainian and Russian, and I know the specific challenges Russian-speaking and Ukrainian students face and what to focus on for faster improvement."
       },
       "interview": {
-        "title": "Interview Preparation",
-        "description": "With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and professional communication."
+        "title": "Beyond the Test",
+        "description": "With my Cambridge Business English certification and HR experience in Canada, I help you prepare for job interviews and workplace communication."
       }
     },
     "credentials": {
@@ -83,21 +91,21 @@
     ]
   },
   "trial": {
-    "title": "Book Your Free Trial Lesson",
-    "subtitle": "25 minutes to see if we're a good fit • No commitment required",
-    "processTitle": "What Happens<br />in Your Trial",
+    "title": "Schedule Your Free Consultation",
+    "subtitle": "20 minutes to evaluate your English level and goals • No commitment required",
+    "processTitle": "What Happens<br />in Your Free Consultation",
     "steps": {
       "assessment": {
         "title": "Assessment",
         "description": "I evaluate your current English level and your specific goals (CELPIP, general English, or job interviews)"
       },
       "practice": {
-        "title": "Practice Task",
-        "description": "You try a relevant speaking task based on your goals (CELPIP practice, conversation, or interview simulation)"
+        "title": "Quick Practice",
+        "description": "You try a relevant task (CELPIP practice, conversation, or interview simulation) based on your needs"
       },
       "feedback": {
         "title": "Feedback & Recommendation", 
-        "description": "I give you specific feedback and suggest next steps"
+        "description": "I give you specific feedback and suggest next steps. No pressure — just clear guidance on how to reach your goals."
       }
     },
     "booking": {
@@ -105,8 +113,8 @@
       "badgeMobile": "Limited time offer",
       "title": "Book Your Spot",
       "description": "Pick a time that works for you",
-      "button": "Book Free Trial",
-      "comparePrice": "CA$15",
+      "button": "Book Free Consultation Now",
+      "comparePrice": "",
       "currentPrice": "FREE",
       "note": "Instant confirmation • No waiting"
     }
@@ -126,8 +134,9 @@
         "Structured feedback sessions",
         "Weekly practice schedule"
       ],
-      "urgency": "Limited spots available for September 2025",
-      "price": "From CAD $15 per session"
+      "urgency": "📋 Join Waiting List - Next Cohort Starting Soon",
+      "price": "From CAD $25 per session",
+      "button": "Join Waiting List"
     },
     "oneOnOne": {
       "title": "1-on-1 Lessons",
@@ -140,7 +149,8 @@
         "Flexible scheduling",
         "Intensive feedback and progress tracking"
       ],
-      "price": "From CAD $35 per session"
+      "price": "CAD $50 per hour",
+      "note": "Monthly payment available"
     },
     "paired": {
       "title": "Paired Lessons",
@@ -153,7 +163,8 @@
         "Individual and pair feedback",
         "Cost-effective option"
       ],
-      "price": "From CAD $25 per session (each)"
+      "price": "CAD $35 per session (each)",
+      "note": "Save while learning together"
     }
   },
   "newsletter": {
@@ -165,10 +176,10 @@
   },
   "finalCta": {
     "title": "Ready to Improve Your English?",
-    "description": "Book your free trial lesson now. I'll help you understand exactly where you are and what you need to do to reach your CELPIP goals.",
-    "button": "Book Your FREE Trial Lesson",
+    "description": "Book your free consultation now. I'll help you understand exactly where you are and what you need to do to reach your CELPIP goals.",
+    "button": "Book Your FREE Consultation",
     "details": {
-      "duration": "25 minutes",
+      "duration": "20 minutes",
       "price": "Completely FREE", 
       "commitment": "No commitment"
     }
